@@ -43,25 +43,25 @@
             appointmentsPanelSearchBar = new TextBox();
             appointmentsPanelInputBtn = new Button();
             appointmentsPanelGridView = new DataGridView();
-            panel2 = new Panel();
-            button3 = new Button();
-            textBox2 = new TextBox();
-            button4 = new Button();
-            dataGridView2 = new DataGridView();
-            panel3 = new Panel();
-            button5 = new Button();
-            textBox3 = new TextBox();
-            button6 = new Button();
-            dataGridView3 = new DataGridView();
+            inventoryPanel = new Panel();
+            inventoryPanelSearchBtn = new Button();
+            inventoryPanelSearchBar = new TextBox();
+            inventoryPanelInputBtn = new Button();
+            inventoryPanelGridView = new DataGridView();
+            miscellaneousPanel = new Panel();
+            miscellaneousPanelSearchBtn = new Button();
+            miscellaneousPanelSearchBar = new TextBox();
+            miscellaneousPanelInputBtn = new Button();
+            miscellaneousPanelGridView = new DataGridView();
             attendancePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)attendancePanelGridView).BeginInit();
             sidebarPanel.SuspendLayout();
             appointmentsPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)appointmentsPanelGridView).BeginInit();
-            panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
-            panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView3).BeginInit();
+            inventoryPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)inventoryPanelGridView).BeginInit();
+            miscellaneousPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)miscellaneousPanelGridView).BeginInit();
             SuspendLayout();
             // 
             // attendancePanel
@@ -90,7 +90,7 @@
             // 
             attendancePanelSearchBar.Location = new Point(122, 75);
             attendancePanelSearchBar.Name = "attendancePanelSearchBar";
-            attendancePanelSearchBar.Size = new Size(405, 23);
+            attendancePanelSearchBar.Size = new Size(405, 31);
             attendancePanelSearchBar.TabIndex = 5;
             attendancePanelSearchBar.TextChanged += textBox1_TextChanged_1;
             // 
@@ -109,6 +109,7 @@
             attendancePanelGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             attendancePanelGridView.Location = new Point(9, 104);
             attendancePanelGridView.Name = "attendancePanelGridView";
+            attendancePanelGridView.RowHeadersWidth = 62;
             attendancePanelGridView.Size = new Size(265, 404);
             attendancePanelGridView.TabIndex = 0;
             // 
@@ -187,7 +188,7 @@
             // 
             appointmentsPanelSearchBar.Location = new Point(122, 75);
             appointmentsPanelSearchBar.Name = "appointmentsPanelSearchBar";
-            appointmentsPanelSearchBar.Size = new Size(405, 23);
+            appointmentsPanelSearchBar.Size = new Size(405, 31);
             appointmentsPanelSearchBar.TabIndex = 5;
             // 
             // appointmentsPanelInputBtn
@@ -204,98 +205,101 @@
             appointmentsPanelGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             appointmentsPanelGridView.Location = new Point(9, 104);
             appointmentsPanelGridView.Name = "appointmentsPanelGridView";
+            appointmentsPanelGridView.RowHeadersWidth = 62;
             appointmentsPanelGridView.Size = new Size(712, 404);
             appointmentsPanelGridView.TabIndex = 0;
             // 
-            // panel2
+            // inventoryPanel
             // 
-            panel2.Controls.Add(button3);
-            panel2.Controls.Add(textBox2);
-            panel2.Controls.Add(button4);
-            panel2.Controls.Add(dataGridView2);
-            panel2.Dock = DockStyle.Fill;
-            panel2.Location = new Point(171, 0);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(732, 520);
-            panel2.TabIndex = 11;
+            inventoryPanel.Controls.Add(inventoryPanelSearchBtn);
+            inventoryPanel.Controls.Add(inventoryPanelSearchBar);
+            inventoryPanel.Controls.Add(inventoryPanelInputBtn);
+            inventoryPanel.Controls.Add(inventoryPanelGridView);
+            inventoryPanel.Dock = DockStyle.Fill;
+            inventoryPanel.Location = new Point(171, 0);
+            inventoryPanel.Name = "inventoryPanel";
+            inventoryPanel.Size = new Size(732, 520);
+            inventoryPanel.TabIndex = 11;
             // 
-            // button3
+            // inventoryPanelSearchBtn
             // 
-            button3.Location = new Point(533, 75);
-            button3.Name = "button3";
-            button3.Size = new Size(107, 23);
-            button3.TabIndex = 6;
-            button3.Text = "Search";
-            button3.UseVisualStyleBackColor = true;
+            inventoryPanelSearchBtn.Location = new Point(533, 75);
+            inventoryPanelSearchBtn.Name = "inventoryPanelSearchBtn";
+            inventoryPanelSearchBtn.Size = new Size(107, 23);
+            inventoryPanelSearchBtn.TabIndex = 6;
+            inventoryPanelSearchBtn.Text = "Search";
+            inventoryPanelSearchBtn.UseVisualStyleBackColor = true;
             // 
-            // textBox2
+            // inventoryPanelSearchBar
             // 
-            textBox2.Location = new Point(122, 75);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(405, 23);
-            textBox2.TabIndex = 5;
+            inventoryPanelSearchBar.Location = new Point(122, 75);
+            inventoryPanelSearchBar.Name = "inventoryPanelSearchBar";
+            inventoryPanelSearchBar.Size = new Size(405, 31);
+            inventoryPanelSearchBar.TabIndex = 5;
             // 
-            // button4
+            // inventoryPanelInputBtn
             // 
-            button4.Location = new Point(9, 75);
-            button4.Name = "button4";
-            button4.Size = new Size(107, 23);
-            button4.TabIndex = 4;
-            button4.Text = "Input";
-            button4.UseVisualStyleBackColor = true;
+            inventoryPanelInputBtn.Location = new Point(9, 75);
+            inventoryPanelInputBtn.Name = "inventoryPanelInputBtn";
+            inventoryPanelInputBtn.Size = new Size(107, 23);
+            inventoryPanelInputBtn.TabIndex = 4;
+            inventoryPanelInputBtn.Text = "Input";
+            inventoryPanelInputBtn.UseVisualStyleBackColor = true;
             // 
-            // dataGridView2
+            // inventoryPanelGridView
             // 
-            dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView2.Location = new Point(9, 104);
-            dataGridView2.Name = "dataGridView2";
-            dataGridView2.Size = new Size(712, 404);
-            dataGridView2.TabIndex = 0;
+            inventoryPanelGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            inventoryPanelGridView.Location = new Point(9, 104);
+            inventoryPanelGridView.Name = "inventoryPanelGridView";
+            inventoryPanelGridView.RowHeadersWidth = 62;
+            inventoryPanelGridView.Size = new Size(712, 404);
+            inventoryPanelGridView.TabIndex = 0;
             // 
-            // panel3
+            // miscellaneousPanel
             // 
-            panel3.Controls.Add(button5);
-            panel3.Controls.Add(textBox3);
-            panel3.Controls.Add(button6);
-            panel3.Controls.Add(dataGridView3);
-            panel3.Dock = DockStyle.Fill;
-            panel3.Location = new Point(171, 0);
-            panel3.Name = "panel3";
-            panel3.Size = new Size(732, 520);
-            panel3.TabIndex = 12;
+            miscellaneousPanel.Controls.Add(miscellaneousPanelSearchBtn);
+            miscellaneousPanel.Controls.Add(miscellaneousPanelSearchBar);
+            miscellaneousPanel.Controls.Add(miscellaneousPanelInputBtn);
+            miscellaneousPanel.Controls.Add(miscellaneousPanelGridView);
+            miscellaneousPanel.Dock = DockStyle.Fill;
+            miscellaneousPanel.Location = new Point(171, 0);
+            miscellaneousPanel.Name = "miscellaneousPanel";
+            miscellaneousPanel.Size = new Size(732, 520);
+            miscellaneousPanel.TabIndex = 12;
             // 
-            // button5
+            // miscellaneousPanelSearchBtn
             // 
-            button5.Location = new Point(533, 75);
-            button5.Name = "button5";
-            button5.Size = new Size(107, 23);
-            button5.TabIndex = 6;
-            button5.Text = "Search";
-            button5.UseVisualStyleBackColor = true;
+            miscellaneousPanelSearchBtn.Location = new Point(533, 75);
+            miscellaneousPanelSearchBtn.Name = "miscellaneousPanelSearchBtn";
+            miscellaneousPanelSearchBtn.Size = new Size(107, 23);
+            miscellaneousPanelSearchBtn.TabIndex = 6;
+            miscellaneousPanelSearchBtn.Text = "Search";
+            miscellaneousPanelSearchBtn.UseVisualStyleBackColor = true;
             // 
-            // textBox3
+            // miscellaneousPanelSearchBar
             // 
-            textBox3.Location = new Point(122, 75);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(405, 23);
-            textBox3.TabIndex = 5;
+            miscellaneousPanelSearchBar.Location = new Point(122, 75);
+            miscellaneousPanelSearchBar.Name = "miscellaneousPanelSearchBar";
+            miscellaneousPanelSearchBar.Size = new Size(405, 31);
+            miscellaneousPanelSearchBar.TabIndex = 5;
             // 
-            // button6
+            // miscellaneousPanelInputBtn
             // 
-            button6.Location = new Point(9, 75);
-            button6.Name = "button6";
-            button6.Size = new Size(107, 23);
-            button6.TabIndex = 4;
-            button6.Text = "Input";
-            button6.UseVisualStyleBackColor = true;
+            miscellaneousPanelInputBtn.Location = new Point(9, 75);
+            miscellaneousPanelInputBtn.Name = "miscellaneousPanelInputBtn";
+            miscellaneousPanelInputBtn.Size = new Size(107, 23);
+            miscellaneousPanelInputBtn.TabIndex = 4;
+            miscellaneousPanelInputBtn.Text = "Input";
+            miscellaneousPanelInputBtn.UseVisualStyleBackColor = true;
             // 
-            // dataGridView3
+            // miscellaneousPanelGridView
             // 
-            dataGridView3.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView3.Location = new Point(9, 104);
-            dataGridView3.Name = "dataGridView3";
-            dataGridView3.Size = new Size(712, 404);
-            dataGridView3.TabIndex = 0;
+            miscellaneousPanelGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            miscellaneousPanelGridView.Location = new Point(9, 104);
+            miscellaneousPanelGridView.Name = "miscellaneousPanelGridView";
+            miscellaneousPanelGridView.RowHeadersWidth = 62;
+            miscellaneousPanelGridView.Size = new Size(712, 404);
+            miscellaneousPanelGridView.TabIndex = 0;
             // 
             // Form1
             // 
@@ -303,8 +307,8 @@
             AutoScroll = true;
             ClientSize = new Size(903, 520);
             Controls.Add(attendancePanel);
-            Controls.Add(panel3);
-            Controls.Add(panel2);
+            Controls.Add(miscellaneousPanel);
+            Controls.Add(inventoryPanel);
             Controls.Add(appointmentsPanel);
             Controls.Add(sidebarPanel);
             FormBorderStyle = FormBorderStyle.FixedSingle;
@@ -319,12 +323,12 @@
             appointmentsPanel.ResumeLayout(false);
             appointmentsPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)appointmentsPanelGridView).EndInit();
-            panel2.ResumeLayout(false);
-            panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
-            panel3.ResumeLayout(false);
-            panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView3).EndInit();
+            inventoryPanel.ResumeLayout(false);
+            inventoryPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)inventoryPanelGridView).EndInit();
+            miscellaneousPanel.ResumeLayout(false);
+            miscellaneousPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)miscellaneousPanelGridView).EndInit();
             ResumeLayout(false);
         }
 
@@ -346,15 +350,15 @@
         private TextBox appointmentsPanelSearchBar;
         private Button appointmentsPanelInputBtn;
         private DataGridView appointmentsPanelGridView;
-        private Panel panel2;
-        private Button button3;
-        private TextBox textBox2;
-        private Button button4;
-        private DataGridView dataGridView2;
-        private Panel panel3;
-        private Button button5;
-        private TextBox textBox3;
-        private Button button6;
-        private DataGridView dataGridView3;
+        private Panel inventoryPanel;
+        private Button inventoryPanelSearchBtn;
+        private TextBox inventoryPanelSearchBar;
+        private Button inventoryPanelInputBtn;
+        private DataGridView inventoryPanelGridView;
+        private Panel miscellaneousPanel;
+        private Button miscellaneousPanelSearchBtn;
+        private TextBox miscellaneousPanelSearchBar;
+        private Button miscellaneousPanelInputBtn;
+        private DataGridView miscellaneousPanelGridView;
     }
 }
