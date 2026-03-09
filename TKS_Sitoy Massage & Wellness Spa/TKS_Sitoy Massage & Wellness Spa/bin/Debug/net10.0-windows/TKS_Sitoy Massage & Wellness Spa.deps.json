@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v10.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v10.0": {
+      "TKS_Sitoy Massage & Wellness Spa/1.0.0": {
+        "runtime": {
+          "TKS_Sitoy Massage & Wellness Spa.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "TKS_Sitoy Massage & Wellness Spa/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
