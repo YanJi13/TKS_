@@ -1,6 +1,6 @@
 ﻿namespace TKS_Sitoy_Massage___Wellness_Spa
 {
-    partial class Form1
+    partial class MainForm
     {
         /// <summary>
         ///  Required designer variable.
@@ -297,19 +297,19 @@
             dataGridView3.Size = new Size(712, 404);
             dataGridView3.TabIndex = 0;
             // 
-            // Form1
+            // MainForm
             // 
             AutoScaleMode = AutoScaleMode.None;
             AutoScroll = true;
             ClientSize = new Size(903, 520);
+            Controls.Add(appointmentsPanel);
             Controls.Add(attendancePanel);
             Controls.Add(panel3);
             Controls.Add(panel2);
-            Controls.Add(appointmentsPanel);
             Controls.Add(sidebarPanel);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             MaximizeBox = false;
-            Name = "Form1";
+            Name = "MainForm";
             Text = "Form1";
             Load += Form1_Load;
             attendancePanel.ResumeLayout(false);
