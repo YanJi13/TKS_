@@ -38,11 +38,11 @@
             inventorySideBtn = new Button();
             miscSideBtn = new Button();
             sidebarPanel = new Panel();
-            panel1 = new Panel();
-            button1 = new Button();
-            textBox1 = new TextBox();
-            button2 = new Button();
-            dataGridView1 = new DataGridView();
+            appointmentsPanel = new Panel();
+            appointmentsPanelSearchBtn = new Button();
+            appointmentsPanelSearchBar = new TextBox();
+            appointmentsPanelInputBtn = new Button();
+            appointmentsPanelGridView = new DataGridView();
             panel2 = new Panel();
             button3 = new Button();
             textBox2 = new TextBox();
@@ -56,8 +56,8 @@
             attendancePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)attendancePanelGridView).BeginInit();
             sidebarPanel.SuspendLayout();
-            panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            appointmentsPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)appointmentsPanelGridView).BeginInit();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
             panel3.SuspendLayout();
@@ -109,7 +109,7 @@
             attendancePanelGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             attendancePanelGridView.Location = new Point(9, 104);
             attendancePanelGridView.Name = "attendancePanelGridView";
-            attendancePanelGridView.Size = new Size(712, 404);
+            attendancePanelGridView.Size = new Size(265, 404);
             attendancePanelGridView.TabIndex = 0;
             // 
             // attendanceSideBtn
@@ -162,50 +162,50 @@
             sidebarPanel.Size = new Size(171, 520);
             sidebarPanel.TabIndex = 0;
             // 
-            // panel1
+            // appointmentsPanel
             // 
-            panel1.Controls.Add(button1);
-            panel1.Controls.Add(textBox1);
-            panel1.Controls.Add(button2);
-            panel1.Controls.Add(dataGridView1);
-            panel1.Dock = DockStyle.Fill;
-            panel1.Location = new Point(171, 0);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(732, 520);
-            panel1.TabIndex = 10;
+            appointmentsPanel.Controls.Add(appointmentsPanelSearchBtn);
+            appointmentsPanel.Controls.Add(appointmentsPanelSearchBar);
+            appointmentsPanel.Controls.Add(appointmentsPanelInputBtn);
+            appointmentsPanel.Controls.Add(appointmentsPanelGridView);
+            appointmentsPanel.Dock = DockStyle.Fill;
+            appointmentsPanel.Location = new Point(171, 0);
+            appointmentsPanel.Name = "appointmentsPanel";
+            appointmentsPanel.Size = new Size(732, 520);
+            appointmentsPanel.TabIndex = 10;
             // 
-            // button1
+            // appointmentsPanelSearchBtn
             // 
-            button1.Location = new Point(533, 75);
-            button1.Name = "button1";
-            button1.Size = new Size(107, 23);
-            button1.TabIndex = 6;
-            button1.Text = "Search";
-            button1.UseVisualStyleBackColor = true;
+            appointmentsPanelSearchBtn.Location = new Point(533, 75);
+            appointmentsPanelSearchBtn.Name = "appointmentsPanelSearchBtn";
+            appointmentsPanelSearchBtn.Size = new Size(107, 23);
+            appointmentsPanelSearchBtn.TabIndex = 6;
+            appointmentsPanelSearchBtn.Text = "Search";
+            appointmentsPanelSearchBtn.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // appointmentsPanelSearchBar
             // 
-            textBox1.Location = new Point(122, 75);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(405, 23);
-            textBox1.TabIndex = 5;
+            appointmentsPanelSearchBar.Location = new Point(122, 75);
+            appointmentsPanelSearchBar.Name = "appointmentsPanelSearchBar";
+            appointmentsPanelSearchBar.Size = new Size(405, 23);
+            appointmentsPanelSearchBar.TabIndex = 5;
             // 
-            // button2
+            // appointmentsPanelInputBtn
             // 
-            button2.Location = new Point(9, 75);
-            button2.Name = "button2";
-            button2.Size = new Size(107, 23);
-            button2.TabIndex = 4;
-            button2.Text = "Input";
-            button2.UseVisualStyleBackColor = true;
+            appointmentsPanelInputBtn.Location = new Point(9, 75);
+            appointmentsPanelInputBtn.Name = "appointmentsPanelInputBtn";
+            appointmentsPanelInputBtn.Size = new Size(107, 23);
+            appointmentsPanelInputBtn.TabIndex = 4;
+            appointmentsPanelInputBtn.Text = "Input";
+            appointmentsPanelInputBtn.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // appointmentsPanelGridView
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(9, 104);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(712, 404);
-            dataGridView1.TabIndex = 0;
+            appointmentsPanelGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            appointmentsPanelGridView.Location = new Point(9, 104);
+            appointmentsPanelGridView.Name = "appointmentsPanelGridView";
+            appointmentsPanelGridView.Size = new Size(712, 404);
+            appointmentsPanelGridView.TabIndex = 0;
             // 
             // panel2
             // 
@@ -302,10 +302,10 @@
             AutoScaleMode = AutoScaleMode.None;
             AutoScroll = true;
             ClientSize = new Size(903, 520);
+            Controls.Add(attendancePanel);
             Controls.Add(panel3);
             Controls.Add(panel2);
-            Controls.Add(panel1);
-            Controls.Add(attendancePanel);
+            Controls.Add(appointmentsPanel);
             Controls.Add(sidebarPanel);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             MaximizeBox = false;
@@ -316,9 +316,9 @@
             attendancePanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)attendancePanelGridView).EndInit();
             sidebarPanel.ResumeLayout(false);
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            appointmentsPanel.ResumeLayout(false);
+            appointmentsPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)appointmentsPanelGridView).EndInit();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
@@ -341,11 +341,11 @@
         private Button appointmentsSideBtn;
         private Button inventorySideBtn;
         private Button miscSideBtn;
-        private Panel panel1;
-        private Button button1;
-        private TextBox textBox1;
-        private Button button2;
-        private DataGridView dataGridView1;
+        private Panel appointmentsPanel;
+        private Button appointmentsPanelSearchBtn;
+        private TextBox appointmentsPanelSearchBar;
+        private Button appointmentsPanelInputBtn;
+        private DataGridView appointmentsPanelGridView;
         private Panel panel2;
         private Button button3;
         private TextBox textBox2;
