@@ -12,7 +12,7 @@ namespace TKS_Sitoy_Massage___Wellness_Spa
 
         }
 
-        private void attendanceSideBtn_Click(object sender, EventArgs e)
+        private void showAttendancePanel(object sender, EventArgs e)
         {
             attendancePanel.Visible = true;
             appointmentsPanel.Visible = false;
@@ -21,7 +21,7 @@ namespace TKS_Sitoy_Massage___Wellness_Spa
             attendancePanel.BringToFront();
         }
 
-        private void appointmentsSideBtn_Click(object sender, EventArgs e)
+        private void showAppointmentsPanel(object sender, EventArgs e)
         {
             attendancePanel.Visible = false;
             appointmentsPanel.Visible = true;
@@ -30,7 +30,7 @@ namespace TKS_Sitoy_Massage___Wellness_Spa
             appointmentsPanel.BringToFront();
 
         }
-        private void inventorySideBtn_Click(object sender, EventArgs e)
+        private void showInventoryPanel(object sender, EventArgs e)
         {
             attendancePanel.Visible = false;
             appointmentsPanel.Visible = false;
@@ -40,13 +40,36 @@ namespace TKS_Sitoy_Massage___Wellness_Spa
 
         }
 
-        private void miscSideBtn_Click(object sender, EventArgs e)
+        private void showMiscPanel(object sender, EventArgs e)
         {
             attendancePanel.Visible = false;
             appointmentsPanel.Visible = false;
             inventoryPanel.Visible = false;
             miscellaneousPanel.Visible = true;
             miscellaneousPanel.BringToFront();
+        }
+
+        private void showAttendancePopup(object sender, EventArgs e)
+        {
+            attendanceInputPopUp attendancePopup = new attendanceInputPopUp();
+            attendancePopup.ShowDialog();
+        }
+
+        private void showAppointmentsPopup(object sender, EventArgs e)
+        {
+            appointmentsInputPopUp appointmentsPopup = new appointmentsInputPopUp();
+            appointmentsPopup.ShowDialog();
+        }
+        private void showInventoryPopup(object sender, EventArgs e)
+        {
+            inventoryInputPopUp inventoryPopup = new inventoryInputPopUp();
+            inventoryPopup.ShowDialog();
+        }
+
+        private void showMiscPopup(object sender, EventArgs e)
+        {
+            miscellaneousInputPopUp miscPopup = new miscellaneousInputPopUp();
+            miscPopup.ShowDialog();
         }
     }
 }

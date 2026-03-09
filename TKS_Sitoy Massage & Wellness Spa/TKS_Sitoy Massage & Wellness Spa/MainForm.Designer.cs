@@ -73,7 +73,7 @@
             attendancePanel.Dock = DockStyle.Fill;
             attendancePanel.Location = new Point(171, 0);
             attendancePanel.Name = "attendancePanel";
-            attendancePanel.Size = new Size(732, 520);
+            attendancePanel.Size = new Size(733, 521);
             attendancePanel.TabIndex = 9;
             // 
             // attendancePanelSearchBtn
@@ -100,6 +100,7 @@
             attendancePanelInputBtn.TabIndex = 4;
             attendancePanelInputBtn.Text = "Input";
             attendancePanelInputBtn.UseVisualStyleBackColor = true;
+            attendancePanelInputBtn.Click += showAttendancePopup;
             // 
             // attendancePanelGridView
             // 
@@ -118,7 +119,7 @@
             attendanceSideBtn.TabIndex = 0;
             attendanceSideBtn.Text = "Attendance";
             attendanceSideBtn.UseVisualStyleBackColor = true;
-            attendanceSideBtn.Click += attendanceSideBtn_Click;
+            attendanceSideBtn.Click += showAttendancePanel;
             // 
             // appointmentsSideBtn
             // 
@@ -128,7 +129,7 @@
             appointmentsSideBtn.TabIndex = 1;
             appointmentsSideBtn.Text = "Appointments";
             appointmentsSideBtn.UseVisualStyleBackColor = true;
-            appointmentsSideBtn.Click += appointmentsSideBtn_Click;
+            appointmentsSideBtn.Click += showAppointmentsPanel;
             // 
             // inventorySideBtn
             // 
@@ -138,7 +139,7 @@
             inventorySideBtn.TabIndex = 2;
             inventorySideBtn.Text = "Inventory";
             inventorySideBtn.UseVisualStyleBackColor = true;
-            inventorySideBtn.Click += inventorySideBtn_Click;
+            inventorySideBtn.Click += showInventoryPanel;
             // 
             // miscSideBtn
             // 
@@ -148,7 +149,7 @@
             miscSideBtn.TabIndex = 3;
             miscSideBtn.Text = "Miscellaneous";
             miscSideBtn.UseVisualStyleBackColor = true;
-            miscSideBtn.Click += miscSideBtn_Click;
+            miscSideBtn.Click += showMiscPanel;
             // 
             // sidebarPanel
             // 
@@ -159,7 +160,7 @@
             sidebarPanel.Dock = DockStyle.Left;
             sidebarPanel.Location = new Point(0, 0);
             sidebarPanel.Name = "sidebarPanel";
-            sidebarPanel.Size = new Size(171, 520);
+            sidebarPanel.Size = new Size(171, 521);
             sidebarPanel.TabIndex = 0;
             // 
             // appointmentsPanel
@@ -171,7 +172,7 @@
             appointmentsPanel.Dock = DockStyle.Fill;
             appointmentsPanel.Location = new Point(171, 0);
             appointmentsPanel.Name = "appointmentsPanel";
-            appointmentsPanel.Size = new Size(732, 520);
+            appointmentsPanel.Size = new Size(733, 521);
             appointmentsPanel.TabIndex = 10;
             // 
             // appointmentsPanelSearchBtn
@@ -198,6 +199,7 @@
             appointmentsPanelInputBtn.TabIndex = 4;
             appointmentsPanelInputBtn.Text = "Input";
             appointmentsPanelInputBtn.UseVisualStyleBackColor = true;
+            appointmentsPanelInputBtn.Click += showAppointmentsPopup;
             // 
             // appointmentsPanelGridView
             // 
@@ -217,7 +219,7 @@
             inventoryPanel.Dock = DockStyle.Fill;
             inventoryPanel.Location = new Point(171, 0);
             inventoryPanel.Name = "inventoryPanel";
-            inventoryPanel.Size = new Size(732, 520);
+            inventoryPanel.Size = new Size(733, 521);
             inventoryPanel.TabIndex = 11;
             // 
             // inventoryPanelSearchBtn
@@ -244,6 +246,7 @@
             inventoryPanelInputBtn.TabIndex = 4;
             inventoryPanelInputBtn.Text = "Input";
             inventoryPanelInputBtn.UseVisualStyleBackColor = true;
+            inventoryPanelInputBtn.Click += showInventoryPopup;
             // 
             // inventoryPanelGridView
             // 
@@ -263,7 +266,7 @@
             miscellaneousPanel.Dock = DockStyle.Fill;
             miscellaneousPanel.Location = new Point(171, 0);
             miscellaneousPanel.Name = "miscellaneousPanel";
-            miscellaneousPanel.Size = new Size(732, 520);
+            miscellaneousPanel.Size = new Size(733, 521);
             miscellaneousPanel.TabIndex = 12;
             // 
             // miscellaneousPanelSearchBtn
@@ -290,6 +293,7 @@
             miscellaneousPanelInputBtn.TabIndex = 4;
             miscellaneousPanelInputBtn.Text = "Input";
             miscellaneousPanelInputBtn.UseVisualStyleBackColor = true;
+            miscellaneousPanelInputBtn.Click += showMiscPopup;
             // 
             // miscellaneousPanelGridView
             // 
@@ -304,7 +308,7 @@
             // 
             AutoScaleMode = AutoScaleMode.None;
             AutoScroll = true;
-            ClientSize = new Size(903, 520);
+            ClientSize = new Size(904, 521);
             Controls.Add(attendancePanel);
             Controls.Add(appointmentsPanel);
             Controls.Add(inventoryPanel);
