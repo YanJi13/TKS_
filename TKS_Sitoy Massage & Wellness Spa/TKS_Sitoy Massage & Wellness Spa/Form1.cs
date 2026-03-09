@@ -27,8 +27,8 @@ namespace TKS_Sitoy_Massage___Wellness_Spa
         private void button2_Click(object sender, EventArgs e)
         {
             attendancePanel.Visible = false;
-            panelAppointments.Visible = true;
-            panelAppointments.BringToFront();
+            appointmentsPanel.Visible = true;
+            appointmentsPanel.BringToFront();
 
         }
 
