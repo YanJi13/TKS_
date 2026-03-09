@@ -6,5 +6,10 @@ namespace TKS_Sitoy_Massage___Wellness_Spa
         {
             InitializeComponent();
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -12,6 +12,7 @@ namespace TKS_Sitoy_Massage___Wellness_Spa
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
             Application.Run(new Form1());
+
         }
     }
 }
