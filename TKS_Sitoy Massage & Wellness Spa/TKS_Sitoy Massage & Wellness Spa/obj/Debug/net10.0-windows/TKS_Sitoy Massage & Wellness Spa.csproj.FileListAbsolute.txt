@@ -19,3 +19,4 @@ C:\! Temp File Folder\3rd Year Term 2\Information Management\TKS\TKS_Sitoy Massa
 C:\! Temp File Folder\3rd Year Term 2\Information Management\TKS\TKS_Sitoy Massage & Wellness Spa\TKS_Sitoy Massage & Wellness Spa\obj\Debug\net10.0-windows\TKS_Sitoy_Massage___Wellness_Spa.appointmentsInputPopUp.resources
 C:\! Temp File Folder\3rd Year Term 2\Information Management\TKS\TKS_Sitoy Massage & Wellness Spa\TKS_Sitoy Massage & Wellness Spa\obj\Debug\net10.0-windows\TKS_Sitoy_Massage___Wellness_Spa.inventoryInputPopUp.resources
 C:\! Temp File Folder\3rd Year Term 2\Information Management\TKS\TKS_Sitoy Massage & Wellness Spa\TKS_Sitoy Massage & Wellness Spa\obj\Debug\net10.0-windows\TKS_Sitoy_Massage___Wellness_Spa.miscellaneousInputPopUp.resources
+C:\! Temp File Folder\3rd Year Term 2\Information Management\TKS\TKS_Sitoy Massage & Wellness Spa\TKS_Sitoy Massage & Wellness Spa\obj\Debug\net10.0-windows\TKS_Sitoy_Massage___Wellness_Spa.Properties.Resources.resources
