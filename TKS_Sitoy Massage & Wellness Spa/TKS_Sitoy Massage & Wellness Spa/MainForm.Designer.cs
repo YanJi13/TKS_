@@ -73,9 +73,8 @@
             attendancePanel.Dock = DockStyle.Fill;
             attendancePanel.Location = new Point(171, 0);
             attendancePanel.Name = "attendancePanel";
-            attendancePanel.Size = new Size(732, 520);
+            attendancePanel.Size = new Size(733, 521);
             attendancePanel.TabIndex = 9;
-            attendancePanel.Paint += panel2_Paint_1;
             // 
             // attendancePanelSearchBtn
             // 
@@ -90,9 +89,8 @@
             // 
             attendancePanelSearchBar.Location = new Point(122, 75);
             attendancePanelSearchBar.Name = "attendancePanelSearchBar";
-            attendancePanelSearchBar.Size = new Size(405, 31);
+            attendancePanelSearchBar.Size = new Size(405, 23);
             attendancePanelSearchBar.TabIndex = 5;
-            attendancePanelSearchBar.TextChanged += textBox1_TextChanged_1;
             // 
             // attendancePanelInputBtn
             // 
@@ -102,7 +100,7 @@
             attendancePanelInputBtn.TabIndex = 4;
             attendancePanelInputBtn.Text = "Input";
             attendancePanelInputBtn.UseVisualStyleBackColor = true;
-            attendancePanelInputBtn.Click += button5_Click;
+            attendancePanelInputBtn.Click += showAttendancePopup;
             // 
             // attendancePanelGridView
             // 
@@ -121,7 +119,7 @@
             attendanceSideBtn.TabIndex = 0;
             attendanceSideBtn.Text = "Attendance";
             attendanceSideBtn.UseVisualStyleBackColor = true;
-            attendanceSideBtn.Click += button1_Click;
+            attendanceSideBtn.Click += showAttendancePanel;
             // 
             // appointmentsSideBtn
             // 
@@ -131,7 +129,7 @@
             appointmentsSideBtn.TabIndex = 1;
             appointmentsSideBtn.Text = "Appointments";
             appointmentsSideBtn.UseVisualStyleBackColor = true;
-            appointmentsSideBtn.Click += button2_Click;
+            appointmentsSideBtn.Click += showAppointmentsPanel;
             // 
             // inventorySideBtn
             // 
@@ -141,6 +139,7 @@
             inventorySideBtn.TabIndex = 2;
             inventorySideBtn.Text = "Inventory";
             inventorySideBtn.UseVisualStyleBackColor = true;
+            inventorySideBtn.Click += showInventoryPanel;
             // 
             // miscSideBtn
             // 
@@ -150,6 +149,7 @@
             miscSideBtn.TabIndex = 3;
             miscSideBtn.Text = "Miscellaneous";
             miscSideBtn.UseVisualStyleBackColor = true;
+            miscSideBtn.Click += showMiscPanel;
             // 
             // sidebarPanel
             // 
@@ -160,7 +160,7 @@
             sidebarPanel.Dock = DockStyle.Left;
             sidebarPanel.Location = new Point(0, 0);
             sidebarPanel.Name = "sidebarPanel";
-            sidebarPanel.Size = new Size(171, 520);
+            sidebarPanel.Size = new Size(171, 521);
             sidebarPanel.TabIndex = 0;
             // 
             // appointmentsPanel
@@ -172,7 +172,7 @@
             appointmentsPanel.Dock = DockStyle.Fill;
             appointmentsPanel.Location = new Point(171, 0);
             appointmentsPanel.Name = "appointmentsPanel";
-            appointmentsPanel.Size = new Size(732, 520);
+            appointmentsPanel.Size = new Size(733, 521);
             appointmentsPanel.TabIndex = 10;
             // 
             // appointmentsPanelSearchBtn
@@ -188,7 +188,7 @@
             // 
             appointmentsPanelSearchBar.Location = new Point(122, 75);
             appointmentsPanelSearchBar.Name = "appointmentsPanelSearchBar";
-            appointmentsPanelSearchBar.Size = new Size(405, 31);
+            appointmentsPanelSearchBar.Size = new Size(405, 23);
             appointmentsPanelSearchBar.TabIndex = 5;
             // 
             // appointmentsPanelInputBtn
@@ -199,6 +199,7 @@
             appointmentsPanelInputBtn.TabIndex = 4;
             appointmentsPanelInputBtn.Text = "Input";
             appointmentsPanelInputBtn.UseVisualStyleBackColor = true;
+            appointmentsPanelInputBtn.Click += showAppointmentsPopup;
             // 
             // appointmentsPanelGridView
             // 
@@ -218,7 +219,7 @@
             inventoryPanel.Dock = DockStyle.Fill;
             inventoryPanel.Location = new Point(171, 0);
             inventoryPanel.Name = "inventoryPanel";
-            inventoryPanel.Size = new Size(732, 520);
+            inventoryPanel.Size = new Size(733, 521);
             inventoryPanel.TabIndex = 11;
             // 
             // inventoryPanelSearchBtn
@@ -234,7 +235,7 @@
             // 
             inventoryPanelSearchBar.Location = new Point(122, 75);
             inventoryPanelSearchBar.Name = "inventoryPanelSearchBar";
-            inventoryPanelSearchBar.Size = new Size(405, 31);
+            inventoryPanelSearchBar.Size = new Size(405, 23);
             inventoryPanelSearchBar.TabIndex = 5;
             // 
             // inventoryPanelInputBtn
@@ -245,6 +246,7 @@
             inventoryPanelInputBtn.TabIndex = 4;
             inventoryPanelInputBtn.Text = "Input";
             inventoryPanelInputBtn.UseVisualStyleBackColor = true;
+            inventoryPanelInputBtn.Click += showInventoryPopup;
             // 
             // inventoryPanelGridView
             // 
@@ -264,7 +266,7 @@
             miscellaneousPanel.Dock = DockStyle.Fill;
             miscellaneousPanel.Location = new Point(171, 0);
             miscellaneousPanel.Name = "miscellaneousPanel";
-            miscellaneousPanel.Size = new Size(732, 520);
+            miscellaneousPanel.Size = new Size(733, 521);
             miscellaneousPanel.TabIndex = 12;
             // 
             // miscellaneousPanelSearchBtn
@@ -280,7 +282,7 @@
             // 
             miscellaneousPanelSearchBar.Location = new Point(122, 75);
             miscellaneousPanelSearchBar.Name = "miscellaneousPanelSearchBar";
-            miscellaneousPanelSearchBar.Size = new Size(405, 31);
+            miscellaneousPanelSearchBar.Size = new Size(405, 23);
             miscellaneousPanelSearchBar.TabIndex = 5;
             // 
             // miscellaneousPanelInputBtn
@@ -291,6 +293,7 @@
             miscellaneousPanelInputBtn.TabIndex = 4;
             miscellaneousPanelInputBtn.Text = "Input";
             miscellaneousPanelInputBtn.UseVisualStyleBackColor = true;
+            miscellaneousPanelInputBtn.Click += showMiscPopup;
             // 
             // miscellaneousPanelGridView
             // 
@@ -298,24 +301,24 @@
             miscellaneousPanelGridView.Location = new Point(9, 104);
             miscellaneousPanelGridView.Name = "miscellaneousPanelGridView";
             miscellaneousPanelGridView.RowHeadersWidth = 62;
-            miscellaneousPanelGridView.Size = new Size(712, 404);
+            miscellaneousPanelGridView.Size = new Size(349, 404);
             miscellaneousPanelGridView.TabIndex = 0;
             // 
             // MainForm
             // 
             AutoScaleMode = AutoScaleMode.None;
             AutoScroll = true;
-            ClientSize = new Size(903, 520);
-            Controls.Add(appointmentsPanel);
+            ClientSize = new Size(904, 521);
             Controls.Add(attendancePanel);
-            Controls.Add(miscellaneousPanel);
+            Controls.Add(appointmentsPanel);
             Controls.Add(inventoryPanel);
+            Controls.Add(miscellaneousPanel);
             Controls.Add(sidebarPanel);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             MaximizeBox = false;
             Name = "MainForm";
-            Text = "Form1";
-            Load += Form1_Load;
+            Text = "Sitoy Massage & Wellness Spa";
+            Load += mainForm_Load;
             attendancePanel.ResumeLayout(false);
             attendancePanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)attendancePanelGridView).EndInit();
@@ -332,11 +335,15 @@
             ResumeLayout(false);
         }
 
+        private void InventorySideBtn_Click(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
         #endregion
 
         private Panel sidebarPanel;
         private Panel attendancePanel;
-        private Label miscLabel;
         private Button attendancePanelSearchBtn;
         private TextBox attendancePanelSearchBar;
         private Button attendancePanelInputBtn;

@@ -9,4 +9,16 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Update="MiscellaneousPopUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="InventoryPopUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="AppointmentsPopUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+
 </Project>

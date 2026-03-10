@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\DILG-RO12-MUTYA\\source\\repos\\TKS_\\TKS_Sitoy Massage & Wellness Spa\\TKS_Sitoy Massage & Wellness Spa\\TKS_Sitoy Massage & Wellness Spa.csproj": {}
+    "C:\\! Temp File Folder\\3rd Year Term 2\\Information Management\\TKS\\TKS_Sitoy Massage & Wellness Spa\\TKS_Sitoy Massage & Wellness Spa\\TKS_Sitoy Massage & Wellness Spa.csproj": {}
   },
   "projects": {
-    "C:\\Users\\DILG-RO12-MUTYA\\source\\repos\\TKS_\\TKS_Sitoy Massage & Wellness Spa\\TKS_Sitoy Massage & Wellness Spa\\TKS_Sitoy Massage & Wellness Spa.csproj": {
+    "C:\\! Temp File Folder\\3rd Year Term 2\\Information Management\\TKS\\TKS_Sitoy Massage & Wellness Spa\\TKS_Sitoy Massage & Wellness Spa\\TKS_Sitoy Massage & Wellness Spa.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\DILG-RO12-MUTYA\\source\\repos\\TKS_\\TKS_Sitoy Massage & Wellness Spa\\TKS_Sitoy Massage & Wellness Spa\\TKS_Sitoy Massage & Wellness Spa.csproj",
+        "projectUniqueName": "C:\\! Temp File Folder\\3rd Year Term 2\\Information Management\\TKS\\TKS_Sitoy Massage & Wellness Spa\\TKS_Sitoy Massage & Wellness Spa\\TKS_Sitoy Massage & Wellness Spa.csproj",
         "projectName": "TKS_Sitoy Massage & Wellness Spa",
-        "projectPath": "C:\\Users\\DILG-RO12-MUTYA\\source\\repos\\TKS_\\TKS_Sitoy Massage & Wellness Spa\\TKS_Sitoy Massage & Wellness Spa\\TKS_Sitoy Massage & Wellness Spa.csproj",
-        "packagesPath": "C:\\Users\\DILG-RO12-MUTYA\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\DILG-RO12-MUTYA\\source\\repos\\TKS_\\TKS_Sitoy Massage & Wellness Spa\\TKS_Sitoy Massage & Wellness Spa\\obj\\",
+        "projectPath": "C:\\! Temp File Folder\\3rd Year Term 2\\Information Management\\TKS\\TKS_Sitoy Massage & Wellness Spa\\TKS_Sitoy Massage & Wellness Spa\\TKS_Sitoy Massage & Wellness Spa.csproj",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "outputPath": "C:\\! Temp File Folder\\3rd Year Term 2\\Information Management\\TKS\\TKS_Sitoy Massage & Wellness Spa\\TKS_Sitoy Massage & Wellness Spa\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\DILG-RO12-MUTYA\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
