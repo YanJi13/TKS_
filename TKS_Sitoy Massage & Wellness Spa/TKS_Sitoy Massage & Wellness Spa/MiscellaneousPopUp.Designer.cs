@@ -39,35 +39,39 @@
             // 
             // miscExpensesAmountInput
             // 
-            miscExpensesAmountInput.Location = new Point(25, 56);
+            miscExpensesAmountInput.Location = new Point(36, 93);
+            miscExpensesAmountInput.Margin = new Padding(4, 5, 4, 5);
             miscExpensesAmountInput.Name = "miscExpensesAmountInput";
-            miscExpensesAmountInput.Size = new Size(127, 23);
+            miscExpensesAmountInput.Size = new Size(180, 31);
             miscExpensesAmountInput.TabIndex = 0;
             // 
             // miscExpensesAmountLabel
             // 
             miscExpensesAmountLabel.AutoSize = true;
             miscExpensesAmountLabel.Font = new Font("Segoe UI", 10F);
-            miscExpensesAmountLabel.Location = new Point(25, 33);
+            miscExpensesAmountLabel.Location = new Point(36, 55);
             miscExpensesAmountLabel.Margin = new Padding(0);
             miscExpensesAmountLabel.Name = "miscExpensesAmountLabel";
-            miscExpensesAmountLabel.Size = new Size(94, 19);
+            miscExpensesAmountLabel.Size = new Size(132, 28);
             miscExpensesAmountLabel.TabIndex = 1;
             miscExpensesAmountLabel.Text = "Misc Amount:";
             miscExpensesAmountLabel.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // miscellaneousCalendar
             // 
-            miscellaneousCalendar.Location = new Point(179, 33);
+            miscellaneousCalendar.Location = new Point(256, 55);
+            miscellaneousCalendar.Margin = new Padding(13, 15, 13, 15);
             miscellaneousCalendar.Name = "miscellaneousCalendar";
             miscellaneousCalendar.TabIndex = 2;
+            miscellaneousCalendar.DateChanged += miscellaneousCalendar_DateChanged;
             // 
             // miscellaneousCancelBtn
             // 
             miscellaneousCancelBtn.BackColor = Color.IndianRed;
-            miscellaneousCancelBtn.Location = new Point(79, 251);
+            miscellaneousCancelBtn.Location = new Point(113, 418);
+            miscellaneousCancelBtn.Margin = new Padding(4, 5, 4, 5);
             miscellaneousCancelBtn.Name = "miscellaneousCancelBtn";
-            miscellaneousCancelBtn.Size = new Size(101, 38);
+            miscellaneousCancelBtn.Size = new Size(144, 63);
             miscellaneousCancelBtn.TabIndex = 3;
             miscellaneousCancelBtn.Text = "Cancel";
             miscellaneousCancelBtn.UseVisualStyleBackColor = false;
@@ -77,40 +81,43 @@
             // 
             miscellaneousEnterBtn.BackColor = Color.YellowGreen;
             miscellaneousEnterBtn.Cursor = Cursors.Hand;
-            miscellaneousEnterBtn.Location = new Point(244, 251);
+            miscellaneousEnterBtn.Location = new Point(349, 418);
+            miscellaneousEnterBtn.Margin = new Padding(4, 5, 4, 5);
             miscellaneousEnterBtn.Name = "miscellaneousEnterBtn";
-            miscellaneousEnterBtn.Size = new Size(101, 38);
+            miscellaneousEnterBtn.Size = new Size(144, 63);
             miscellaneousEnterBtn.TabIndex = 4;
             miscellaneousEnterBtn.Text = "Enter";
             miscellaneousEnterBtn.UseVisualStyleBackColor = false;
+            miscellaneousEnterBtn.Click += miscellaneousEnterBtn_Click;
             // 
             // miscNoteLabel
             // 
             miscNoteLabel.AutoSize = true;
             miscNoteLabel.Font = new Font("Segoe UI", 10F);
-            miscNoteLabel.Location = new Point(25, 93);
+            miscNoteLabel.Location = new Point(36, 155);
             miscNoteLabel.Margin = new Padding(0);
             miscNoteLabel.Name = "miscNoteLabel";
-            miscNoteLabel.Size = new Size(42, 19);
+            miscNoteLabel.Size = new Size(60, 28);
             miscNoteLabel.TabIndex = 6;
             miscNoteLabel.Text = "Note:";
             miscNoteLabel.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // miscNoteInput
             // 
-            miscNoteInput.Location = new Point(25, 116);
+            miscNoteInput.Location = new Point(36, 193);
+            miscNoteInput.Margin = new Padding(4, 5, 4, 5);
             miscNoteInput.MaxLength = 100;
             miscNoteInput.Multiline = true;
             miscNoteInput.Name = "miscNoteInput";
             miscNoteInput.ScrollBars = ScrollBars.Vertical;
-            miscNoteInput.Size = new Size(142, 79);
+            miscNoteInput.Size = new Size(201, 129);
             miscNoteInput.TabIndex = 5;
             // 
             // miscellaneousInputPopUp
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(424, 321);
+            ClientSize = new Size(606, 535);
             Controls.Add(miscNoteLabel);
             Controls.Add(miscNoteInput);
             Controls.Add(miscellaneousEnterBtn);
@@ -118,6 +125,7 @@
             Controls.Add(miscellaneousCalendar);
             Controls.Add(miscExpensesAmountLabel);
             Controls.Add(miscExpensesAmountInput);
+            Margin = new Padding(4, 5, 4, 5);
             MaximizeBox = false;
             Name = "miscellaneousInputPopUp";
             StartPosition = FormStartPosition.CenterParent;
