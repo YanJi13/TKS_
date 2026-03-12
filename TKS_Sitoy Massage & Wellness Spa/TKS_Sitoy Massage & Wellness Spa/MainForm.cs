@@ -57,51 +57,111 @@ namespace TKS_Sitoy_Massage___Wellness_Spa
 
         private void showAttendancePopup(object sender, EventArgs e)
         {
-            attendanceInputPopUp attendancePopup = new attendanceInputPopUp();
+            AttendanceInputPopUp attendancePopup = new AttendanceInputPopUp();
             attendancePopup.ShowDialog();
         }
 
         private void showAppointmentsPopup(object sender, EventArgs e)
         {
-            appointmentsInputPopUp appointmentsPopup = new appointmentsInputPopUp();
+            AppointmentsInputPopUp appointmentsPopup = new AppointmentsInputPopUp();
             appointmentsPopup.ShowDialog();
         }
         private void showInventoryPopup(object sender, EventArgs e)
         {
-            inventoryInputPopUp inventoryPopup = new inventoryInputPopUp();
+            InventoryInputPopUp inventoryPopup = new InventoryInputPopUp();
             inventoryPopup.ShowDialog();
         }
 
         private void showMiscPopup(object sender, EventArgs e)
         {
-            miscellaneousInputPopUp miscPopup = new miscellaneousInputPopUp();
+            MiscellaneousInputPopUp miscPopup = new MiscellaneousInputPopUp();
             miscPopup.ShowDialog();
         }
 
         private void attendancePanelGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            // ignore header clicks
+            if (e.RowIndex < 0)
+                return;
 
-        }
+            // DELETE button
+            if (attendancePanelGridView.Columns[e.ColumnIndex].Name == "attendanceDeleteBtn")
+            {
+                MessageBox.Show("Delete button clicked for row " + e.RowIndex);
+                // put your delete logic here
+            }
 
-        private void inventoryPanelGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
+            // EDIT button
+            if (attendancePanelGridView.Columns[e.ColumnIndex].Name == "attendanceEditBtn")
+            {
+                MessageBox.Show("Edit button clicked for row " + e.RowIndex);
+                // open your edit popup here
+            }
         }
 
         private void appointmentsPanelGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            // ignore header clicks
+            if (e.RowIndex < 0)
+                return;
 
+            // DELETE button
+            if (appointmentsPanelGridView.Columns[e.ColumnIndex].Name == "appointmentsDeleteBtn")
+            {
+                MessageBox.Show("Delete button clicked for row " + e.RowIndex);
+                // put your delete logic here
+            }
+
+            // EDIT button
+            if (appointmentsPanelGridView.Columns[e.ColumnIndex].Name == "appointmentsEditBtn")
+            {
+                MessageBox.Show("Edit button clicked for row " + e.RowIndex);
+                // open your edit popup here
+            }
+        }
+
+        private void inventoryPanelGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            // ignore header clicks
+            if (e.RowIndex < 0)
+                return;
+
+            // DELETE button
+            if (inventoryPanelGridView.Columns[e.ColumnIndex].Name == "inventoryDeleteBtn")
+            {
+                MessageBox.Show("Delete button clicked for row " + e.RowIndex);
+                // put your delete logic here
+            }
+
+            // EDIT button
+            if (inventoryPanelGridView.Columns[e.ColumnIndex].Name == "inventoryEditBtn")
+            {
+                MessageBox.Show("Edit button clicked for row " + e.RowIndex);
+                // open your edit popup here
+            }
         }
 
         private void miscellaneousPanelGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            // ignore header clicks
+            if (e.RowIndex < 0)
+                return;
 
+            // DELETE button
+            if (miscellaneousPanelGridView.Columns[e.ColumnIndex].Name == "miscellaneousDeleteBtn")
+            {
+                MessageBox.Show("Delete button clicked for row " + e.RowIndex);
+                // put your delete logic here
+            }
+
+            // EDIT button
+            if (miscellaneousPanelGridView.Columns[e.ColumnIndex].Name == "miscellaneousEditBtn")
+            {
+                MessageBox.Show("Edit button clicked for row " + e.RowIndex);
+                // open your edit popup here
+            }
         }
 
-        private void attendancePanel_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
         public void LoadAttendanceGrid()
         {
             dbCon db = new dbCon();
@@ -236,139 +296,6 @@ namespace TKS_Sitoy_Massage___Wellness_Spa
                 MessageBox.Show("Error loading Miscellaneous: " + ex.Message);
             }
             finally { db.CloseConnection(); }
-        }
-
-
-        private void attendancePanelGridView_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-        private void SearchByItemInv(string searchTerm)
-        {
-            dbCon db = new dbCon();
-            try
-            {
-                // 1. SQL Query - Searching for the item name
-                string query = @"SELECT 
-                            inventory_id AS i,
-                            inventory_date AS d, 
-                            CASE WHEN oil = 1 THEN 'Oil' ELSE '-' END AS o, 
-                            CASE WHEN towel = 1 THEN 'Towel' ELSE '-' END AS t, 
-                            CASE WHEN bedsheet = 1 THEN 'Bed Sheet' ELSE '-' END AS b 
-                         FROM inventory
-                         WHERE (CASE WHEN oil = 1 THEN 'Oil' ELSE '-' END LIKE @search)
-                            OR (CASE WHEN towel = 1 THEN 'Towel' ELSE '-' END LIKE @search)
-                            OR (CASE WHEN bedsheet = 1 THEN 'Bed Sheet' ELSE '-' END LIKE @search)
-                            ORDER BY oil DESC, towel DESC, bedsheet DESC";
-
-                MySqlCommand cmd = new MySqlCommand(query, db.connection);
-                cmd.Parameters.AddWithValue("@search", "%" + searchTerm + "%");
-
-                MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
-                DataTable dt = new DataTable();
-
-                db.OpenConnection();
-                adapter.Fill(dt);
-                
-                inventoryPanelGridView.Refresh();
-                inventoryPanelGridView.Columns["inventoryIdHeader"].DataPropertyName = "i";
-                inventoryPanelGridView.Columns["inventoryDateHeader"].DataPropertyName = "d";
-                inventoryPanelGridView.Columns["inventoryOilHeader"].DataPropertyName = "o";
-                inventoryPanelGridView.Columns["inventoryTowelHeader"].DataPropertyName = "t";
-                inventoryPanelGridView.Columns["inventoryBedSheetHeader"].DataPropertyName = "b";
-
-                // Bind the filtered results to your grid
-                inventoryPanelGridView.DataSource = dt;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Search Error: " + ex.Message);
-            }
-            finally
-            {
-                db.CloseConnection();
-            }
-        }
-        private void inventoryPanelSearchBtn_Click(object sender, EventArgs e)
-        {
-            string searchText = inventoryPanelSearchBar.Text.Trim();
-
-            if (string.IsNullOrEmpty(searchText))
-            {
-                // If empty, show everything again
-                LoadInventoryGrid();
-            }
-            else
-            {
-                SearchByItemInv(searchText);
-            }
-        }
-
-        private void SearchByDateMisc(string searchTerm)
-        {
-            dbCon db = new dbCon();
-            try
-            {
-                // We use DATE_FORMAT to make sure we can search it like a string/text
-                string query = @"SELECT 
-                            m.misc_expenses_id AS i,
-                            t.date AS d, 
-                            m.misc_expenses AS a 
-                         FROM misc_expenses m 
-                         JOIN therapist_attendance t ON m.attendance_id = t.attendance_id 
-                         WHERE DATE_FORMAT(t.date, '%d/%m/%Y') LIKE @search
-                         ORDER BY t.date DESC";
-
-                MySqlCommand cmd = new MySqlCommand(query, db.connection);
-                cmd.Parameters.AddWithValue("@search", "%" + searchTerm + "%");
-
-                MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
-                DataTable dt = new DataTable();
-
-                db.OpenConnection();
-                adapter.Fill(dt);
-
-                miscellaneousPanelGridView.Refresh();
-
-                miscellaneousPanelGridView.Columns["miscellaneousIdHeader"].DataPropertyName = "i";
-                miscellaneousPanelGridView.Columns["miscellaneousDateHeader"].DataPropertyName = "d";
-                miscellaneousPanelGridView.Columns["miscellaneousAmount"].DataPropertyName = "a";
-
-                // Bind the filtered results to your grid
-                miscellaneousPanelGridView.DataSource = dt;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Search Error: " + ex.Message);
-            }
-            finally
-            {
-                db.CloseConnection();
-            }
-        }
-
-        private void miscellaneousPanelSearchBtn_Click(object sender, EventArgs e)
-        {
-            string searchText = miscellaneousPanelSearchBar.Text.Trim();
-
-            if (string.IsNullOrEmpty(searchText))
-            {
-                // If empty, show everything again
-                LoadMiscGrid();
-            }
-            else
-            {
-                SearchByDateMisc(searchText);
-            }
-        }
-        private void attendancePanelSearchBtn_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void miscellaneousPanelSearchBar_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

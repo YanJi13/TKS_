@@ -10,10 +10,10 @@ using System.Xml.Linq;
 
 namespace TKS_Sitoy_Massage___Wellness_Spa
 {
-    public partial class appointmentsInputPopUp : Form
+    public partial class AppointmentsInputPopUp : Form
     {
         bool dateWasSelected = false; // To track the calendar click
-        public appointmentsInputPopUp()
+        public AppointmentsInputPopUp()
         {
             InitializeComponent();
         }
@@ -90,7 +90,7 @@ namespace TKS_Sitoy_Massage___Wellness_Spa
 
         private void appointmentsCalendar_DateChanged(object sender, DateRangeEventArgs e)
         {
-            
+
         }
     }
 }

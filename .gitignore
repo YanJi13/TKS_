@@ -2,7 +2,6 @@
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
 
-/TKS_Sitoy Massage & Wellness Spa/.vs/TKS_Sitoy Massage & Wellness Spa.slnx
 bin/
 obj/
 .vs/

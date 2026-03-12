@@ -10,10 +10,10 @@ using System.Xml.Linq;
 
 namespace TKS_Sitoy_Massage___Wellness_Spa
 {
-    public partial class attendanceInputPopUp : Form
+    public partial class AttendanceInputPopUp : Form
     {
         
-        public attendanceInputPopUp()
+        public AttendanceInputPopUp()
         {
             InitializeComponent();
         }

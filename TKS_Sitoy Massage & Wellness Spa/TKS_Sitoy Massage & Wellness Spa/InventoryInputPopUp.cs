@@ -9,10 +9,10 @@ using System.Windows.Forms;
 
 namespace TKS_Sitoy_Massage___Wellness_Spa
 {
-    public partial class inventoryInputPopUp : Form
+    public partial class InventoryInputPopUp : Form
     {
         bool dateWasSelected = false; // To track the calendar click
-        public inventoryInputPopUp()
+        public InventoryInputPopUp()
         {
             InitializeComponent();
         }

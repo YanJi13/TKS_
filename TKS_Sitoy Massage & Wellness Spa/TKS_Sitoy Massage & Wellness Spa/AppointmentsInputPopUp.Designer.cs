@@ -1,6 +1,6 @@
 ﻿namespace TKS_Sitoy_Massage___Wellness_Spa
 {
-    partial class appointmentsInputPopUp
+    partial class AppointmentsInputPopUp
     {
         /// <summary>
         /// Required designer variable.
@@ -37,32 +37,32 @@
             appointmentsServiceTypeInput = new TextBox();
             appointmentsCommissionLabel = new Label();
             appointmentsCommissionInput = new TextBox();
+            appointmentsPaymentLabel = new Label();
+            appointmentsPaymentInput = new TextBox();
             SuspendLayout();
             // 
             // appointmentsNameInput
             // 
-            appointmentsNameInput.Location = new Point(36, 92);
-            appointmentsNameInput.Margin = new Padding(4, 5, 4, 5);
+            appointmentsNameInput.Location = new Point(25, 50);
             appointmentsNameInput.Name = "appointmentsNameInput";
-            appointmentsNameInput.Size = new Size(180, 31);
+            appointmentsNameInput.Size = new Size(127, 23);
             appointmentsNameInput.TabIndex = 0;
             // 
             // appointmentsNameLabel
             // 
             appointmentsNameLabel.AutoSize = true;
-            appointmentsNameLabel.Font = new Font("Segoe UI", 10F);
-            appointmentsNameLabel.Location = new Point(36, 55);
+            appointmentsNameLabel.Font = new Font("Segoe UI", 9F);
+            appointmentsNameLabel.Location = new Point(25, 33);
             appointmentsNameLabel.Margin = new Padding(0);
             appointmentsNameLabel.Name = "appointmentsNameLabel";
-            appointmentsNameLabel.Size = new Size(68, 28);
+            appointmentsNameLabel.Size = new Size(42, 15);
             appointmentsNameLabel.TabIndex = 1;
             appointmentsNameLabel.Text = "Name:";
             appointmentsNameLabel.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // appointmentsCalendar
             // 
-            appointmentsCalendar.Location = new Point(256, 55);
-            appointmentsCalendar.Margin = new Padding(13, 15, 13, 15);
+            appointmentsCalendar.Location = new Point(179, 33);
             appointmentsCalendar.Name = "appointmentsCalendar";
             appointmentsCalendar.TabIndex = 2;
             appointmentsCalendar.DateChanged += appointmentsCalendar_DateChanged;
@@ -70,10 +70,9 @@
             // appointmentsCancelBtn
             // 
             appointmentsCancelBtn.BackColor = Color.IndianRed;
-            appointmentsCancelBtn.Location = new Point(113, 418);
-            appointmentsCancelBtn.Margin = new Padding(4, 5, 4, 5);
+            appointmentsCancelBtn.Location = new Point(79, 251);
             appointmentsCancelBtn.Name = "appointmentsCancelBtn";
-            appointmentsCancelBtn.Size = new Size(144, 63);
+            appointmentsCancelBtn.Size = new Size(101, 38);
             appointmentsCancelBtn.TabIndex = 3;
             appointmentsCancelBtn.Text = "Cancel";
             appointmentsCancelBtn.UseVisualStyleBackColor = false;
@@ -83,10 +82,9 @@
             // 
             appointmentsEnterBtn.BackColor = Color.YellowGreen;
             appointmentsEnterBtn.Cursor = Cursors.Hand;
-            appointmentsEnterBtn.Location = new Point(349, 418);
-            appointmentsEnterBtn.Margin = new Padding(4, 5, 4, 5);
+            appointmentsEnterBtn.Location = new Point(244, 251);
             appointmentsEnterBtn.Name = "appointmentsEnterBtn";
-            appointmentsEnterBtn.Size = new Size(144, 63);
+            appointmentsEnterBtn.Size = new Size(101, 38);
             appointmentsEnterBtn.TabIndex = 4;
             appointmentsEnterBtn.Text = "Enter";
             appointmentsEnterBtn.UseVisualStyleBackColor = false;
@@ -95,48 +93,67 @@
             // appointmentsServiceTypeLabel
             // 
             appointmentsServiceTypeLabel.AutoSize = true;
-            appointmentsServiceTypeLabel.Font = new Font("Segoe UI", 10F);
-            appointmentsServiceTypeLabel.Location = new Point(36, 150);
+            appointmentsServiceTypeLabel.Font = new Font("Segoe UI", 9F);
+            appointmentsServiceTypeLabel.Location = new Point(25, 76);
             appointmentsServiceTypeLabel.Margin = new Padding(0);
             appointmentsServiceTypeLabel.Name = "appointmentsServiceTypeLabel";
-            appointmentsServiceTypeLabel.Size = new Size(124, 28);
+            appointmentsServiceTypeLabel.Size = new Size(74, 15);
             appointmentsServiceTypeLabel.TabIndex = 6;
             appointmentsServiceTypeLabel.Text = "Service Type:";
             appointmentsServiceTypeLabel.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // appointmentsServiceTypeInput
             // 
-            appointmentsServiceTypeInput.Location = new Point(36, 188);
-            appointmentsServiceTypeInput.Margin = new Padding(4, 5, 4, 5);
+            appointmentsServiceTypeInput.Location = new Point(25, 94);
             appointmentsServiceTypeInput.Name = "appointmentsServiceTypeInput";
-            appointmentsServiceTypeInput.Size = new Size(180, 31);
+            appointmentsServiceTypeInput.Size = new Size(127, 23);
             appointmentsServiceTypeInput.TabIndex = 5;
             // 
             // appointmentsCommissionLabel
             // 
             appointmentsCommissionLabel.AutoSize = true;
-            appointmentsCommissionLabel.Font = new Font("Segoe UI", 10F);
-            appointmentsCommissionLabel.Location = new Point(36, 248);
+            appointmentsCommissionLabel.Font = new Font("Segoe UI", 9F);
+            appointmentsCommissionLabel.Location = new Point(25, 164);
             appointmentsCommissionLabel.Margin = new Padding(0);
             appointmentsCommissionLabel.Name = "appointmentsCommissionLabel";
-            appointmentsCommissionLabel.Size = new Size(123, 28);
+            appointmentsCommissionLabel.Size = new Size(77, 15);
             appointmentsCommissionLabel.TabIndex = 8;
             appointmentsCommissionLabel.Text = "Commission:";
             appointmentsCommissionLabel.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // appointmentsCommissionInput
             // 
-            appointmentsCommissionInput.Location = new Point(36, 287);
-            appointmentsCommissionInput.Margin = new Padding(4, 5, 4, 5);
+            appointmentsCommissionInput.Location = new Point(25, 182);
             appointmentsCommissionInput.Name = "appointmentsCommissionInput";
-            appointmentsCommissionInput.Size = new Size(180, 31);
+            appointmentsCommissionInput.Size = new Size(127, 23);
             appointmentsCommissionInput.TabIndex = 7;
+            // 
+            // appointmentsPaymentLabel
+            // 
+            appointmentsPaymentLabel.AutoSize = true;
+            appointmentsPaymentLabel.Font = new Font("Segoe UI", 9F);
+            appointmentsPaymentLabel.Location = new Point(25, 120);
+            appointmentsPaymentLabel.Margin = new Padding(0);
+            appointmentsPaymentLabel.Name = "appointmentsPaymentLabel";
+            appointmentsPaymentLabel.Size = new Size(57, 15);
+            appointmentsPaymentLabel.TabIndex = 9;
+            appointmentsPaymentLabel.Text = "Payment:";
+            appointmentsPaymentLabel.TextAlign = ContentAlignment.MiddleLeft;
+            // 
+            // appointmentsPaymentInput
+            // 
+            appointmentsPaymentInput.Location = new Point(25, 138);
+            appointmentsPaymentInput.Name = "appointmentsPaymentInput";
+            appointmentsPaymentInput.Size = new Size(127, 23);
+            appointmentsPaymentInput.TabIndex = 10;
             // 
             // appointmentsInputPopUp
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(606, 535);
+            ClientSize = new Size(424, 321);
+            Controls.Add(appointmentsPaymentInput);
+            Controls.Add(appointmentsPaymentLabel);
             Controls.Add(appointmentsCommissionLabel);
             Controls.Add(appointmentsCommissionInput);
             Controls.Add(appointmentsServiceTypeLabel);
@@ -146,7 +163,6 @@
             Controls.Add(appointmentsCalendar);
             Controls.Add(appointmentsNameLabel);
             Controls.Add(appointmentsNameInput);
-            Margin = new Padding(4, 5, 4, 5);
             MaximizeBox = false;
             Name = "appointmentsInputPopUp";
             StartPosition = FormStartPosition.CenterParent;
@@ -166,5 +182,7 @@
         private TextBox appointmentsServiceTypeInput;
         private Label appointmentsCommissionLabel;
         private TextBox appointmentsCommissionInput;
+        private Label appointmentsPaymentLabel;
+        private TextBox appointmentsPaymentInput;
     }
 }
