@@ -57,24 +57,24 @@ namespace TKS_Sitoy_Massage___Wellness_Spa
 
         private void showAttendancePopup(object sender, EventArgs e)
         {
-            attendanceInputPopUp attendancePopup = new attendanceInputPopUp();
+            AttendanceInputPopUp attendancePopup = new AttendanceInputPopUp();
             attendancePopup.ShowDialog();
         }
 
         private void showAppointmentsPopup(object sender, EventArgs e)
         {
-            appointmentsInputPopUp appointmentsPopup = new appointmentsInputPopUp();
+            AppointmentsInputPopUp appointmentsPopup = new AppointmentsInputPopUp();
             appointmentsPopup.ShowDialog();
         }
         private void showInventoryPopup(object sender, EventArgs e)
         {
-            inventoryInputPopUp inventoryPopup = new inventoryInputPopUp();
+            InventoryInputPopUp inventoryPopup = new InventoryInputPopUp();
             inventoryPopup.ShowDialog();
         }
 
         private void showMiscPopup(object sender, EventArgs e)
         {
-            miscellaneousInputPopUp miscPopup = new miscellaneousInputPopUp();
+            MiscellaneousInputPopUp miscPopup = new MiscellaneousInputPopUp();
             miscPopup.ShowDialog();
         }
 

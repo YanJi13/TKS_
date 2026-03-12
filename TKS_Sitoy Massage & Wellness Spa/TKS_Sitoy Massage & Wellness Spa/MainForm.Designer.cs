@@ -33,6 +33,11 @@
             attendancePanelSearchBar = new TextBox();
             attendancePanelInputBtn = new Button();
             attendancePanelGridView = new DataGridView();
+            attendanceIdHeader = new DataGridViewTextBoxColumn();
+            attendanceDateHeader = new DataGridViewTextBoxColumn();
+            attendanceNameHeader = new DataGridViewTextBoxColumn();
+            attendanceDeleteBtn = new DataGridViewButtonColumn();
+            attendanceEditBtn = new DataGridViewButtonColumn();
             attendanceSideBtn = new Button();
             appointmentsSideBtn = new Button();
             inventorySideBtn = new Button();
@@ -43,27 +48,19 @@
             appointmentsPanelSearchBar = new TextBox();
             appointmentsPanelInputBtn = new Button();
             appointmentsPanelGridView = new DataGridView();
+            appointmentsIdHeader = new DataGridViewTextBoxColumn();
+            appointmentsDateHeader = new DataGridViewTextBoxColumn();
+            appointmentsNameHeader = new DataGridViewTextBoxColumn();
+            appointmentsServiceHeader = new DataGridViewTextBoxColumn();
+            appointmentsPaymentHeader = new DataGridViewTextBoxColumn();
+            appointmentsCommissionHeader = new DataGridViewTextBoxColumn();
+            appointmentsDeleteBtn = new DataGridViewButtonColumn();
+            appointmentsEditBtn = new DataGridViewButtonColumn();
             inventoryPanel = new Panel();
             inventoryPanelSearchBtn = new Button();
             inventoryPanelSearchBar = new TextBox();
             inventoryPanelInputBtn = new Button();
             inventoryPanelGridView = new DataGridView();
-            miscellaneousPanel = new Panel();
-            miscellaneousPanelSearchBtn = new Button();
-            miscellaneousPanelSearchBar = new TextBox();
-            miscellaneousPanelInputBtn = new Button();
-            miscellaneousPanelGridView = new DataGridView();
-            attendanceIdHeader = new DataGridViewTextBoxColumn();
-            attendanceDateHeader = new DataGridViewTextBoxColumn();
-            attendanceNameHeader = new DataGridViewTextBoxColumn();
-            attendanceDeleteBtn = new DataGridViewButtonColumn();
-            attendanceEditBtn = new DataGridViewButtonColumn();
-            miscellaneousIdHeader = new DataGridViewTextBoxColumn();
-            miscellaneousDateHeader = new DataGridViewTextBoxColumn();
-            miscellaneousAmount = new DataGridViewTextBoxColumn();
-            miscellaneousNoteHeader = new DataGridViewTextBoxColumn();
-            miscellaneousDeleteBtn = new DataGridViewButtonColumn();
-            miscellaneousEditBtn = new DataGridViewButtonColumn();
             inventoryIdHeader = new DataGridViewTextBoxColumn();
             inventoryDateHeader = new DataGridViewTextBoxColumn();
             inventoryOilHeader = new DataGridViewTextBoxColumn();
@@ -71,13 +68,17 @@
             inventoryBedSheetHeader = new DataGridViewTextBoxColumn();
             inventoryDeleteBtn = new DataGridViewButtonColumn();
             inventoryEditBtn = new DataGridViewButtonColumn();
-            appointmentsIdHeader = new DataGridViewTextBoxColumn();
-            appointmentsDateHeader = new DataGridViewTextBoxColumn();
-            appointmentsNameHeader = new DataGridViewTextBoxColumn();
-            appointmentsServiceHeader = new DataGridViewTextBoxColumn();
-            appointmentsCommissionHeader = new DataGridViewTextBoxColumn();
-            appointmentsDeleteBtn = new DataGridViewButtonColumn();
-            appointmentsEditBtn = new DataGridViewButtonColumn();
+            miscellaneousPanel = new Panel();
+            miscellaneousPanelSearchBtn = new Button();
+            miscellaneousPanelSearchBar = new TextBox();
+            miscellaneousPanelInputBtn = new Button();
+            miscellaneousPanelGridView = new DataGridView();
+            miscellaneousIdHeader = new DataGridViewTextBoxColumn();
+            miscellaneousDateHeader = new DataGridViewTextBoxColumn();
+            miscellaneousAmount = new DataGridViewTextBoxColumn();
+            miscellaneousNoteHeader = new DataGridViewTextBoxColumn();
+            miscellaneousDeleteBtn = new DataGridViewButtonColumn();
+            miscellaneousEditBtn = new DataGridViewButtonColumn();
             attendancePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)attendancePanelGridView).BeginInit();
             sidebarPanel.SuspendLayout();
@@ -96,9 +97,9 @@
             attendancePanel.Controls.Add(attendancePanelInputBtn);
             attendancePanel.Controls.Add(attendancePanelGridView);
             attendancePanel.Dock = DockStyle.Fill;
-            attendancePanel.Location = new Point(171, 0);
+            attendancePanel.Location = new Point(199, 0);
             attendancePanel.Name = "attendancePanel";
-            attendancePanel.Size = new Size(788, 547);
+            attendancePanel.Size = new Size(839, 547);
             attendancePanel.TabIndex = 9;
             attendancePanel.Paint += attendancePanel_Paint;
             // 
@@ -115,7 +116,7 @@
             // 
             attendancePanelSearchBar.Location = new Point(122, 60);
             attendancePanelSearchBar.Name = "attendancePanelSearchBar";
-            attendancePanelSearchBar.Size = new Size(236, 31);
+            attendancePanelSearchBar.Size = new Size(236, 23);
             attendancePanelSearchBar.TabIndex = 5;
             // 
             // attendancePanelInputBtn
@@ -131,19 +132,57 @@
             // attendancePanelGridView
             // 
             attendancePanelGridView.AllowUserToAddRows = false;
+            attendancePanelGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             attendancePanelGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             attendancePanelGridView.Columns.AddRange(new DataGridViewColumn[] { attendanceIdHeader, attendanceDateHeader, attendanceNameHeader, attendanceDeleteBtn, attendanceEditBtn });
             attendancePanelGridView.Location = new Point(9, 120);
             attendancePanelGridView.Name = "attendancePanelGridView";
             attendancePanelGridView.RowHeadersWidth = 30;
-            attendancePanelGridView.Size = new Size(472, 404);
+            attendancePanelGridView.Size = new Size(765, 404);
             attendancePanelGridView.TabIndex = 0;
+            // 
+            // attendanceIdHeader
+            // 
+            attendanceIdHeader.HeaderText = "Id";
+            attendanceIdHeader.MinimumWidth = 8;
+            attendanceIdHeader.Name = "attendanceIdHeader";
+            attendanceIdHeader.Visible = false;
+            // 
+            // attendanceDateHeader
+            // 
+            attendanceDateHeader.HeaderText = "Date";
+            attendanceDateHeader.MinimumWidth = 8;
+            attendanceDateHeader.Name = "attendanceDateHeader";
+            // 
+            // attendanceNameHeader
+            // 
+            attendanceNameHeader.HeaderText = "Name";
+            attendanceNameHeader.MinimumWidth = 8;
+            attendanceNameHeader.Name = "attendanceNameHeader";
+            // 
+            // attendanceDeleteBtn
+            // 
+            attendanceDeleteBtn.HeaderText = "Delete";
+            attendanceDeleteBtn.MinimumWidth = 8;
+            attendanceDeleteBtn.Name = "attendanceDeleteBtn";
+            attendanceDeleteBtn.Resizable = DataGridViewTriState.True;
+            attendanceDeleteBtn.SortMode = DataGridViewColumnSortMode.Automatic;
+            attendanceDeleteBtn.Text = "Delete";
+            attendanceDeleteBtn.UseColumnTextForButtonValue = true;
+            // 
+            // attendanceEditBtn
+            // 
+            attendanceEditBtn.HeaderText = "Edit";
+            attendanceEditBtn.MinimumWidth = 8;
+            attendanceEditBtn.Name = "attendanceEditBtn";
+            attendanceEditBtn.Text = "Edit";
+            attendanceEditBtn.UseColumnTextForButtonValue = true;
             // 
             // attendanceSideBtn
             // 
             attendanceSideBtn.Location = new Point(21, 118);
             attendanceSideBtn.Name = "attendanceSideBtn";
-            attendanceSideBtn.Size = new Size(129, 45);
+            attendanceSideBtn.Size = new Size(150, 45);
             attendanceSideBtn.TabIndex = 0;
             attendanceSideBtn.Text = "Attendance";
             attendanceSideBtn.UseVisualStyleBackColor = true;
@@ -153,7 +192,7 @@
             // 
             appointmentsSideBtn.Location = new Point(21, 178);
             appointmentsSideBtn.Name = "appointmentsSideBtn";
-            appointmentsSideBtn.Size = new Size(129, 45);
+            appointmentsSideBtn.Size = new Size(150, 45);
             appointmentsSideBtn.TabIndex = 1;
             appointmentsSideBtn.Text = "Appointments";
             appointmentsSideBtn.UseVisualStyleBackColor = true;
@@ -163,7 +202,7 @@
             // 
             inventorySideBtn.Location = new Point(21, 238);
             inventorySideBtn.Name = "inventorySideBtn";
-            inventorySideBtn.Size = new Size(129, 45);
+            inventorySideBtn.Size = new Size(150, 45);
             inventorySideBtn.TabIndex = 2;
             inventorySideBtn.Text = "Inventory";
             inventorySideBtn.UseVisualStyleBackColor = true;
@@ -173,7 +212,7 @@
             // 
             miscSideBtn.Location = new Point(21, 298);
             miscSideBtn.Name = "miscSideBtn";
-            miscSideBtn.Size = new Size(129, 45);
+            miscSideBtn.Size = new Size(150, 45);
             miscSideBtn.TabIndex = 3;
             miscSideBtn.Text = "Miscellaneous";
             miscSideBtn.UseVisualStyleBackColor = true;
@@ -188,7 +227,7 @@
             sidebarPanel.Dock = DockStyle.Left;
             sidebarPanel.Location = new Point(0, 0);
             sidebarPanel.Name = "sidebarPanel";
-            sidebarPanel.Size = new Size(171, 547);
+            sidebarPanel.Size = new Size(199, 547);
             sidebarPanel.TabIndex = 0;
             // 
             // appointmentsPanel
@@ -198,9 +237,9 @@
             appointmentsPanel.Controls.Add(appointmentsPanelInputBtn);
             appointmentsPanel.Controls.Add(appointmentsPanelGridView);
             appointmentsPanel.Dock = DockStyle.Fill;
-            appointmentsPanel.Location = new Point(171, 0);
+            appointmentsPanel.Location = new Point(199, 0);
             appointmentsPanel.Name = "appointmentsPanel";
-            appointmentsPanel.Size = new Size(788, 547);
+            appointmentsPanel.Size = new Size(839, 547);
             appointmentsPanel.TabIndex = 10;
             // 
             // appointmentsPanelSearchBtn
@@ -216,7 +255,7 @@
             // 
             appointmentsPanelSearchBar.Location = new Point(122, 60);
             appointmentsPanelSearchBar.Name = "appointmentsPanelSearchBar";
-            appointmentsPanelSearchBar.Size = new Size(236, 31);
+            appointmentsPanelSearchBar.Size = new Size(236, 23);
             appointmentsPanelSearchBar.TabIndex = 5;
             // 
             // appointmentsPanelInputBtn
@@ -232,13 +271,66 @@
             // appointmentsPanelGridView
             // 
             appointmentsPanelGridView.AllowUserToAddRows = false;
+            appointmentsPanelGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             appointmentsPanelGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            appointmentsPanelGridView.Columns.AddRange(new DataGridViewColumn[] { appointmentsIdHeader, appointmentsDateHeader, appointmentsNameHeader, appointmentsServiceHeader, appointmentsCommissionHeader, appointmentsDeleteBtn, appointmentsEditBtn });
+            appointmentsPanelGridView.Columns.AddRange(new DataGridViewColumn[] { appointmentsIdHeader, appointmentsDateHeader, appointmentsNameHeader, appointmentsServiceHeader, appointmentsPaymentHeader, appointmentsCommissionHeader, appointmentsDeleteBtn, appointmentsEditBtn });
             appointmentsPanelGridView.Location = new Point(9, 120);
             appointmentsPanelGridView.Name = "appointmentsPanelGridView";
             appointmentsPanelGridView.RowHeadersWidth = 30;
             appointmentsPanelGridView.Size = new Size(765, 404);
             appointmentsPanelGridView.TabIndex = 0;
+            // 
+            // appointmentsIdHeader
+            // 
+            appointmentsIdHeader.HeaderText = "Id";
+            appointmentsIdHeader.MinimumWidth = 8;
+            appointmentsIdHeader.Name = "appointmentsIdHeader";
+            appointmentsIdHeader.Visible = false;
+            // 
+            // appointmentsDateHeader
+            // 
+            appointmentsDateHeader.HeaderText = "Date";
+            appointmentsDateHeader.MinimumWidth = 8;
+            appointmentsDateHeader.Name = "appointmentsDateHeader";
+            // 
+            // appointmentsNameHeader
+            // 
+            appointmentsNameHeader.HeaderText = "Name";
+            appointmentsNameHeader.MinimumWidth = 8;
+            appointmentsNameHeader.Name = "appointmentsNameHeader";
+            // 
+            // appointmentsServiceHeader
+            // 
+            appointmentsServiceHeader.HeaderText = "Service";
+            appointmentsServiceHeader.MinimumWidth = 8;
+            appointmentsServiceHeader.Name = "appointmentsServiceHeader";
+            // 
+            // appointmentsPaymentHeader
+            // 
+            appointmentsPaymentHeader.HeaderText = "Payment";
+            appointmentsPaymentHeader.Name = "appointmentsPaymentHeader";
+            // 
+            // appointmentsCommissionHeader
+            // 
+            appointmentsCommissionHeader.HeaderText = "Commission";
+            appointmentsCommissionHeader.MinimumWidth = 8;
+            appointmentsCommissionHeader.Name = "appointmentsCommissionHeader";
+            // 
+            // appointmentsDeleteBtn
+            // 
+            appointmentsDeleteBtn.HeaderText = "Delete";
+            appointmentsDeleteBtn.MinimumWidth = 8;
+            appointmentsDeleteBtn.Name = "appointmentsDeleteBtn";
+            appointmentsDeleteBtn.Text = "Delete";
+            appointmentsDeleteBtn.UseColumnTextForButtonValue = true;
+            // 
+            // appointmentsEditBtn
+            // 
+            appointmentsEditBtn.HeaderText = "Edit";
+            appointmentsEditBtn.MinimumWidth = 8;
+            appointmentsEditBtn.Name = "appointmentsEditBtn";
+            appointmentsEditBtn.Text = "Edit";
+            appointmentsEditBtn.UseColumnTextForButtonValue = true;
             // 
             // inventoryPanel
             // 
@@ -247,9 +339,9 @@
             inventoryPanel.Controls.Add(inventoryPanelInputBtn);
             inventoryPanel.Controls.Add(inventoryPanelGridView);
             inventoryPanel.Dock = DockStyle.Fill;
-            inventoryPanel.Location = new Point(171, 0);
+            inventoryPanel.Location = new Point(199, 0);
             inventoryPanel.Name = "inventoryPanel";
-            inventoryPanel.Size = new Size(788, 547);
+            inventoryPanel.Size = new Size(839, 547);
             inventoryPanel.TabIndex = 11;
             // 
             // inventoryPanelSearchBtn
@@ -265,7 +357,7 @@
             // 
             inventoryPanelSearchBar.Location = new Point(122, 60);
             inventoryPanelSearchBar.Name = "inventoryPanelSearchBar";
-            inventoryPanelSearchBar.Size = new Size(236, 31);
+            inventoryPanelSearchBar.Size = new Size(236, 23);
             inventoryPanelSearchBar.TabIndex = 5;
             // 
             // inventoryPanelInputBtn
@@ -281,13 +373,57 @@
             // inventoryPanelGridView
             // 
             inventoryPanelGridView.AllowUserToAddRows = false;
+            inventoryPanelGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             inventoryPanelGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             inventoryPanelGridView.Columns.AddRange(new DataGridViewColumn[] { inventoryIdHeader, inventoryDateHeader, inventoryOilHeader, inventoryTowelHeader, inventoryBedSheetHeader, inventoryDeleteBtn, inventoryEditBtn });
             inventoryPanelGridView.Location = new Point(9, 120);
             inventoryPanelGridView.Name = "inventoryPanelGridView";
             inventoryPanelGridView.RowHeadersWidth = 30;
-            inventoryPanelGridView.Size = new Size(752, 404);
+            inventoryPanelGridView.Size = new Size(765, 404);
             inventoryPanelGridView.TabIndex = 0;
+            // 
+            // inventoryIdHeader
+            // 
+            inventoryIdHeader.HeaderText = "Id";
+            inventoryIdHeader.MinimumWidth = 8;
+            inventoryIdHeader.Name = "inventoryIdHeader";
+            inventoryIdHeader.Visible = false;
+            // 
+            // inventoryDateHeader
+            // 
+            inventoryDateHeader.HeaderText = "Date";
+            inventoryDateHeader.MinimumWidth = 8;
+            inventoryDateHeader.Name = "inventoryDateHeader";
+            // 
+            // inventoryOilHeader
+            // 
+            inventoryOilHeader.HeaderText = "Oil";
+            inventoryOilHeader.MinimumWidth = 8;
+            inventoryOilHeader.Name = "inventoryOilHeader";
+            // 
+            // inventoryTowelHeader
+            // 
+            inventoryTowelHeader.HeaderText = "Towel";
+            inventoryTowelHeader.MinimumWidth = 8;
+            inventoryTowelHeader.Name = "inventoryTowelHeader";
+            // 
+            // inventoryBedSheetHeader
+            // 
+            inventoryBedSheetHeader.HeaderText = "Bed Sheet";
+            inventoryBedSheetHeader.MinimumWidth = 8;
+            inventoryBedSheetHeader.Name = "inventoryBedSheetHeader";
+            // 
+            // inventoryDeleteBtn
+            // 
+            inventoryDeleteBtn.HeaderText = "Delete";
+            inventoryDeleteBtn.MinimumWidth = 8;
+            inventoryDeleteBtn.Name = "inventoryDeleteBtn";
+            // 
+            // inventoryEditBtn
+            // 
+            inventoryEditBtn.HeaderText = "Edit";
+            inventoryEditBtn.MinimumWidth = 8;
+            inventoryEditBtn.Name = "inventoryEditBtn";
             // 
             // miscellaneousPanel
             // 
@@ -296,9 +432,9 @@
             miscellaneousPanel.Controls.Add(miscellaneousPanelInputBtn);
             miscellaneousPanel.Controls.Add(miscellaneousPanelGridView);
             miscellaneousPanel.Dock = DockStyle.Fill;
-            miscellaneousPanel.Location = new Point(171, 0);
+            miscellaneousPanel.Location = new Point(199, 0);
             miscellaneousPanel.Name = "miscellaneousPanel";
-            miscellaneousPanel.Size = new Size(788, 547);
+            miscellaneousPanel.Size = new Size(839, 547);
             miscellaneousPanel.TabIndex = 12;
             // 
             // miscellaneousPanelSearchBtn
@@ -314,7 +450,7 @@
             // 
             miscellaneousPanelSearchBar.Location = new Point(122, 60);
             miscellaneousPanelSearchBar.Name = "miscellaneousPanelSearchBar";
-            miscellaneousPanelSearchBar.Size = new Size(236, 31);
+            miscellaneousPanelSearchBar.Size = new Size(236, 23);
             miscellaneousPanelSearchBar.TabIndex = 5;
             // 
             // miscellaneousPanelInputBtn
@@ -330,56 +466,15 @@
             // miscellaneousPanelGridView
             // 
             miscellaneousPanelGridView.AllowUserToAddRows = false;
+            miscellaneousPanelGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             miscellaneousPanelGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             miscellaneousPanelGridView.Columns.AddRange(new DataGridViewColumn[] { miscellaneousIdHeader, miscellaneousDateHeader, miscellaneousAmount, miscellaneousNoteHeader, miscellaneousDeleteBtn, miscellaneousEditBtn });
             miscellaneousPanelGridView.Location = new Point(9, 120);
             miscellaneousPanelGridView.Name = "miscellaneousPanelGridView";
             miscellaneousPanelGridView.RowHeadersWidth = 30;
-            miscellaneousPanelGridView.Size = new Size(532, 404);
+            miscellaneousPanelGridView.Size = new Size(765, 404);
             miscellaneousPanelGridView.TabIndex = 0;
             miscellaneousPanelGridView.CellContentClick += miscellaneousPanelGridView_CellContentClick;
-            // 
-            // attendanceIdHeader
-            // 
-            attendanceIdHeader.HeaderText = "Id";
-            attendanceIdHeader.MinimumWidth = 8;
-            attendanceIdHeader.Name = "attendanceIdHeader";
-            attendanceIdHeader.Visible = false;
-            attendanceIdHeader.Width = 150;
-            // 
-            // attendanceDateHeader
-            // 
-            attendanceDateHeader.HeaderText = "Date";
-            attendanceDateHeader.MinimumWidth = 8;
-            attendanceDateHeader.Name = "attendanceDateHeader";
-            attendanceDateHeader.Width = 150;
-            // 
-            // attendanceNameHeader
-            // 
-            attendanceNameHeader.HeaderText = "Name";
-            attendanceNameHeader.MinimumWidth = 8;
-            attendanceNameHeader.Name = "attendanceNameHeader";
-            attendanceNameHeader.Width = 150;
-            // 
-            // attendanceDeleteBtn
-            // 
-            attendanceDeleteBtn.HeaderText = "Delete";
-            attendanceDeleteBtn.MinimumWidth = 8;
-            attendanceDeleteBtn.Name = "attendanceDeleteBtn";
-            attendanceDeleteBtn.Resizable = DataGridViewTriState.True;
-            attendanceDeleteBtn.SortMode = DataGridViewColumnSortMode.Automatic;
-            attendanceDeleteBtn.Text = "Delete";
-            attendanceDeleteBtn.UseColumnTextForButtonValue = true;
-            attendanceDeleteBtn.Width = 70;
-            // 
-            // attendanceEditBtn
-            // 
-            attendanceEditBtn.HeaderText = "Edit";
-            attendanceEditBtn.MinimumWidth = 8;
-            attendanceEditBtn.Name = "attendanceEditBtn";
-            attendanceEditBtn.Text = "Edit";
-            attendanceEditBtn.UseColumnTextForButtonValue = true;
-            attendanceEditBtn.Width = 70;
             // 
             // miscellaneousIdHeader
             // 
@@ -387,28 +482,24 @@
             miscellaneousIdHeader.MinimumWidth = 8;
             miscellaneousIdHeader.Name = "miscellaneousIdHeader";
             miscellaneousIdHeader.Visible = false;
-            miscellaneousIdHeader.Width = 150;
             // 
             // miscellaneousDateHeader
             // 
             miscellaneousDateHeader.HeaderText = "Date";
             miscellaneousDateHeader.MinimumWidth = 8;
             miscellaneousDateHeader.Name = "miscellaneousDateHeader";
-            miscellaneousDateHeader.Width = 150;
             // 
             // miscellaneousAmount
             // 
             miscellaneousAmount.HeaderText = "Misc Amount";
             miscellaneousAmount.MinimumWidth = 8;
             miscellaneousAmount.Name = "miscellaneousAmount";
-            miscellaneousAmount.Width = 110;
             // 
             // miscellaneousNoteHeader
             // 
             miscellaneousNoteHeader.HeaderText = "Notes (optional)";
             miscellaneousNoteHeader.MinimumWidth = 8;
             miscellaneousNoteHeader.Name = "miscellaneousNoteHeader";
-            miscellaneousNoteHeader.Width = 120;
             // 
             // miscellaneousDeleteBtn
             // 
@@ -417,7 +508,6 @@
             miscellaneousDeleteBtn.Name = "miscellaneousDeleteBtn";
             miscellaneousDeleteBtn.Text = "Delete";
             miscellaneousDeleteBtn.UseColumnTextForButtonValue = true;
-            miscellaneousDeleteBtn.Width = 70;
             // 
             // miscellaneousEditBtn
             // 
@@ -426,119 +516,14 @@
             miscellaneousEditBtn.Name = "miscellaneousEditBtn";
             miscellaneousEditBtn.Text = "Edit";
             miscellaneousEditBtn.UseColumnTextForButtonValue = true;
-            miscellaneousEditBtn.Width = 70;
-            // 
-            // inventoryIdHeader
-            // 
-            inventoryIdHeader.HeaderText = "Id";
-            inventoryIdHeader.MinimumWidth = 8;
-            inventoryIdHeader.Name = "inventoryIdHeader";
-            inventoryIdHeader.Visible = false;
-            inventoryIdHeader.Width = 150;
-            // 
-            // inventoryDateHeader
-            // 
-            inventoryDateHeader.HeaderText = "Date";
-            inventoryDateHeader.MinimumWidth = 8;
-            inventoryDateHeader.Name = "inventoryDateHeader";
-            inventoryDateHeader.Width = 150;
-            // 
-            // inventoryOilHeader
-            // 
-            inventoryOilHeader.HeaderText = "Oil";
-            inventoryOilHeader.MinimumWidth = 8;
-            inventoryOilHeader.Name = "inventoryOilHeader";
-            inventoryOilHeader.Width = 150;
-            // 
-            // inventoryTowelHeader
-            // 
-            inventoryTowelHeader.HeaderText = "Towel";
-            inventoryTowelHeader.MinimumWidth = 8;
-            inventoryTowelHeader.Name = "inventoryTowelHeader";
-            inventoryTowelHeader.Width = 150;
-            // 
-            // inventoryBedSheetHeader
-            // 
-            inventoryBedSheetHeader.HeaderText = "Bed Sheet";
-            inventoryBedSheetHeader.MinimumWidth = 8;
-            inventoryBedSheetHeader.Name = "inventoryBedSheetHeader";
-            inventoryBedSheetHeader.Width = 150;
-            // 
-            // inventoryDeleteBtn
-            // 
-            inventoryDeleteBtn.HeaderText = "Delete";
-            inventoryDeleteBtn.MinimumWidth = 8;
-            inventoryDeleteBtn.Name = "inventoryDeleteBtn";
-            inventoryDeleteBtn.Width = 70;
-            // 
-            // inventoryEditBtn
-            // 
-            inventoryEditBtn.HeaderText = "Edit";
-            inventoryEditBtn.MinimumWidth = 8;
-            inventoryEditBtn.Name = "inventoryEditBtn";
-            inventoryEditBtn.Width = 70;
-            // 
-            // appointmentsIdHeader
-            // 
-            appointmentsIdHeader.HeaderText = "Id";
-            appointmentsIdHeader.MinimumWidth = 8;
-            appointmentsIdHeader.Name = "appointmentsIdHeader";
-            appointmentsIdHeader.Visible = false;
-            appointmentsIdHeader.Width = 150;
-            // 
-            // appointmentsDateHeader
-            // 
-            appointmentsDateHeader.HeaderText = "Date";
-            appointmentsDateHeader.MinimumWidth = 8;
-            appointmentsDateHeader.Name = "appointmentsDateHeader";
-            appointmentsDateHeader.Width = 150;
-            // 
-            // appointmentsNameHeader
-            // 
-            appointmentsNameHeader.HeaderText = "Name";
-            appointmentsNameHeader.MinimumWidth = 8;
-            appointmentsNameHeader.Name = "appointmentsNameHeader";
-            appointmentsNameHeader.Width = 150;
-            // 
-            // appointmentsServiceHeader
-            // 
-            appointmentsServiceHeader.HeaderText = "Service";
-            appointmentsServiceHeader.MinimumWidth = 8;
-            appointmentsServiceHeader.Name = "appointmentsServiceHeader";
-            appointmentsServiceHeader.Width = 150;
-            // 
-            // appointmentsCommissionHeader
-            // 
-            appointmentsCommissionHeader.HeaderText = "Commission";
-            appointmentsCommissionHeader.MinimumWidth = 8;
-            appointmentsCommissionHeader.Name = "appointmentsCommissionHeader";
-            appointmentsCommissionHeader.Width = 150;
-            // 
-            // appointmentsDeleteBtn
-            // 
-            appointmentsDeleteBtn.HeaderText = "Delete";
-            appointmentsDeleteBtn.MinimumWidth = 8;
-            appointmentsDeleteBtn.Name = "appointmentsDeleteBtn";
-            appointmentsDeleteBtn.Text = "Delete";
-            appointmentsDeleteBtn.UseColumnTextForButtonValue = true;
-            appointmentsDeleteBtn.Width = 70;
-            // 
-            // appointmentsEditBtn
-            // 
-            appointmentsEditBtn.HeaderText = "Edit";
-            appointmentsEditBtn.MinimumWidth = 8;
-            appointmentsEditBtn.Name = "appointmentsEditBtn";
-            appointmentsEditBtn.Text = "Edit";
-            appointmentsEditBtn.UseColumnTextForButtonValue = true;
-            appointmentsEditBtn.Width = 70;
             // 
             // MainForm
             // 
             AutoScaleMode = AutoScaleMode.None;
             AutoScroll = true;
-            ClientSize = new Size(959, 547);
-            Controls.Add(attendancePanel);
+            ClientSize = new Size(1038, 547);
             Controls.Add(appointmentsPanel);
+            Controls.Add(attendancePanel);
             Controls.Add(inventoryPanel);
             Controls.Add(miscellaneousPanel);
             Controls.Add(sidebarPanel);
@@ -595,13 +580,6 @@
         private DataGridViewTextBoxColumn attendanceNameHeader;
         private DataGridViewButtonColumn attendanceDeleteBtn;
         private DataGridViewButtonColumn attendanceEditBtn;
-        private DataGridViewTextBoxColumn appointmentsIdHeader;
-        private DataGridViewTextBoxColumn appointmentsDateHeader;
-        private DataGridViewTextBoxColumn appointmentsNameHeader;
-        private DataGridViewTextBoxColumn appointmentsServiceHeader;
-        private DataGridViewTextBoxColumn appointmentsCommissionHeader;
-        private DataGridViewButtonColumn appointmentsDeleteBtn;
-        private DataGridViewButtonColumn appointmentsEditBtn;
         private DataGridViewTextBoxColumn inventoryIdHeader;
         private DataGridViewTextBoxColumn inventoryDateHeader;
         private DataGridViewTextBoxColumn inventoryOilHeader;
@@ -615,5 +593,13 @@
         private DataGridViewTextBoxColumn miscellaneousNoteHeader;
         private DataGridViewButtonColumn miscellaneousDeleteBtn;
         private DataGridViewButtonColumn miscellaneousEditBtn;
+        private DataGridViewTextBoxColumn appointmentsIdHeader;
+        private DataGridViewTextBoxColumn appointmentsDateHeader;
+        private DataGridViewTextBoxColumn appointmentsNameHeader;
+        private DataGridViewTextBoxColumn appointmentsServiceHeader;
+        private DataGridViewTextBoxColumn appointmentsPaymentHeader;
+        private DataGridViewTextBoxColumn appointmentsCommissionHeader;
+        private DataGridViewButtonColumn appointmentsDeleteBtn;
+        private DataGridViewButtonColumn appointmentsEditBtn;
     }
 }

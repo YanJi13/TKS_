@@ -1,6 +1,6 @@
 ﻿namespace TKS_Sitoy_Massage___Wellness_Spa
 {
-    partial class miscellaneousInputPopUp
+    partial class MiscellaneousInputPopUp
     {
         /// <summary>
         /// Required designer variable.
