@@ -80,28 +80,88 @@ namespace TKS_Sitoy_Massage___Wellness_Spa
 
         private void attendancePanelGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            // ignore header clicks
+            if (e.RowIndex < 0)
+                return;
 
-        }
+            // DELETE button
+            if (attendancePanelGridView.Columns[e.ColumnIndex].Name == "attendanceDeleteBtn")
+            {
+                MessageBox.Show("Delete button clicked for row " + e.RowIndex);
+                // put your delete logic here
+            }
 
-        private void inventoryPanelGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
+            // EDIT button
+            if (attendancePanelGridView.Columns[e.ColumnIndex].Name == "attendanceEditBtn")
+            {
+                MessageBox.Show("Edit button clicked for row " + e.RowIndex);
+                // open your edit popup here
+            }
         }
 
         private void appointmentsPanelGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            // ignore header clicks
+            if (e.RowIndex < 0)
+                return;
 
+            // DELETE button
+            if (appointmentsPanelGridView.Columns[e.ColumnIndex].Name == "appointmentsDeleteBtn")
+            {
+                MessageBox.Show("Delete button clicked for row " + e.RowIndex);
+                // put your delete logic here
+            }
+
+            // EDIT button
+            if (appointmentsPanelGridView.Columns[e.ColumnIndex].Name == "appointmentsEditBtn")
+            {
+                MessageBox.Show("Edit button clicked for row " + e.RowIndex);
+                // open your edit popup here
+            }
+        }
+
+        private void inventoryPanelGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            // ignore header clicks
+            if (e.RowIndex < 0)
+                return;
+
+            // DELETE button
+            if (inventoryPanelGridView.Columns[e.ColumnIndex].Name == "inventoryDeleteBtn")
+            {
+                MessageBox.Show("Delete button clicked for row " + e.RowIndex);
+                // put your delete logic here
+            }
+
+            // EDIT button
+            if (inventoryPanelGridView.Columns[e.ColumnIndex].Name == "inventoryEditBtn")
+            {
+                MessageBox.Show("Edit button clicked for row " + e.RowIndex);
+                // open your edit popup here
+            }
         }
 
         private void miscellaneousPanelGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            // ignore header clicks
+            if (e.RowIndex < 0)
+                return;
 
+            // DELETE button
+            if (miscellaneousPanelGridView.Columns[e.ColumnIndex].Name == "miscellaneousDeleteBtn")
+            {
+                MessageBox.Show("Delete button clicked for row " + e.RowIndex);
+                // put your delete logic here
+            }
+
+            // EDIT button
+            if (miscellaneousPanelGridView.Columns[e.ColumnIndex].Name == "miscellaneousEditBtn")
+            {
+                MessageBox.Show("Edit button clicked for row " + e.RowIndex);
+                // open your edit popup here
+            }
         }
 
-        private void attendancePanel_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
         public void LoadAttendanceGrid()
         {
             dbCon db = new dbCon();
@@ -236,11 +296,6 @@ namespace TKS_Sitoy_Massage___Wellness_Spa
                 MessageBox.Show("Error loading Miscellaneous: " + ex.Message);
             }
             finally { db.CloseConnection(); }
-        }
-
-        private void attendancePanelGridView_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
-        {
-            
         }
     }
 }

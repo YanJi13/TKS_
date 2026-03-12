@@ -10,6 +10,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Update="InventoryEditPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="MiscellaneousEditPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="AttendanceEditPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="AppointmentsDeletePopup.cs">
       <SubType>Form</SubType>
     </Compile>

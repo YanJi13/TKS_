@@ -8,9 +8,9 @@ using System.Windows.Forms;
 
 namespace TKS_Sitoy_Massage___Wellness_Spa
 {
-    public partial class AppointmentEditPopup : Form
+    public partial class AppointmentsEditPopup : Form
     {
-        public AppointmentEditPopup()
+        public AppointmentsEditPopup()
         {
             InitializeComponent();
         }

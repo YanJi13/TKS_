@@ -101,7 +101,6 @@
             attendancePanel.Name = "attendancePanel";
             attendancePanel.Size = new Size(839, 547);
             attendancePanel.TabIndex = 9;
-            attendancePanel.Paint += attendancePanel_Paint;
             // 
             // attendancePanelSearchBtn
             // 
@@ -140,6 +139,7 @@
             attendancePanelGridView.RowHeadersWidth = 30;
             attendancePanelGridView.Size = new Size(765, 404);
             attendancePanelGridView.TabIndex = 0;
+            attendancePanelGridView.CellContentClick += attendancePanelGridView_CellContentClick;
             // 
             // attendanceIdHeader
             // 
@@ -279,6 +279,7 @@
             appointmentsPanelGridView.RowHeadersWidth = 30;
             appointmentsPanelGridView.Size = new Size(765, 404);
             appointmentsPanelGridView.TabIndex = 0;
+            appointmentsPanelGridView.CellContentClick += appointmentsPanelGridView_CellContentClick;
             // 
             // appointmentsIdHeader
             // 
@@ -381,6 +382,7 @@
             inventoryPanelGridView.RowHeadersWidth = 30;
             inventoryPanelGridView.Size = new Size(765, 404);
             inventoryPanelGridView.TabIndex = 0;
+            inventoryPanelGridView.CellContentClick += inventoryPanelGridView_CellContentClick;
             // 
             // inventoryIdHeader
             // 
@@ -522,8 +524,8 @@
             AutoScaleMode = AutoScaleMode.None;
             AutoScroll = true;
             ClientSize = new Size(1038, 547);
-            Controls.Add(appointmentsPanel);
             Controls.Add(attendancePanel);
+            Controls.Add(appointmentsPanel);
             Controls.Add(inventoryPanel);
             Controls.Add(miscellaneousPanel);
             Controls.Add(sidebarPanel);

@@ -28,39 +28,37 @@
         /// </summary>
         private void InitializeComponent()
         {
-            miscExpensesAmountInput = new TextBox();
-            miscExpensesAmountLabel = new Label();
+            miscellaneousExpensesAmountInput = new TextBox();
+            miscellaneousExpensesAmountLabel = new Label();
             miscellaneousCalendar = new MonthCalendar();
             miscellaneousCancelBtn = new Button();
             miscellaneousEnterBtn = new Button();
-            miscNoteLabel = new Label();
-            miscNoteInput = new TextBox();
+            miscellaneousNoteLabel = new Label();
+            miscellaneousNoteInput = new TextBox();
             SuspendLayout();
             // 
-            // miscExpensesAmountInput
+            // miscellaneousExpensesAmountInput
             // 
-            miscExpensesAmountInput.Location = new Point(36, 93);
-            miscExpensesAmountInput.Margin = new Padding(4, 5, 4, 5);
-            miscExpensesAmountInput.Name = "miscExpensesAmountInput";
-            miscExpensesAmountInput.Size = new Size(180, 31);
-            miscExpensesAmountInput.TabIndex = 0;
+            miscellaneousExpensesAmountInput.Location = new Point(25, 56);
+            miscellaneousExpensesAmountInput.Name = "miscellaneousExpensesAmountInput";
+            miscellaneousExpensesAmountInput.Size = new Size(127, 23);
+            miscellaneousExpensesAmountInput.TabIndex = 0;
             // 
-            // miscExpensesAmountLabel
+            // miscellaneousExpensesAmountLabel
             // 
-            miscExpensesAmountLabel.AutoSize = true;
-            miscExpensesAmountLabel.Font = new Font("Segoe UI", 10F);
-            miscExpensesAmountLabel.Location = new Point(36, 55);
-            miscExpensesAmountLabel.Margin = new Padding(0);
-            miscExpensesAmountLabel.Name = "miscExpensesAmountLabel";
-            miscExpensesAmountLabel.Size = new Size(132, 28);
-            miscExpensesAmountLabel.TabIndex = 1;
-            miscExpensesAmountLabel.Text = "Misc Amount:";
-            miscExpensesAmountLabel.TextAlign = ContentAlignment.MiddleLeft;
+            miscellaneousExpensesAmountLabel.AutoSize = true;
+            miscellaneousExpensesAmountLabel.Font = new Font("Segoe UI", 10F);
+            miscellaneousExpensesAmountLabel.Location = new Point(25, 33);
+            miscellaneousExpensesAmountLabel.Margin = new Padding(0);
+            miscellaneousExpensesAmountLabel.Name = "miscellaneousExpensesAmountLabel";
+            miscellaneousExpensesAmountLabel.Size = new Size(94, 19);
+            miscellaneousExpensesAmountLabel.TabIndex = 1;
+            miscellaneousExpensesAmountLabel.Text = "Misc Amount:";
+            miscellaneousExpensesAmountLabel.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // miscellaneousCalendar
             // 
-            miscellaneousCalendar.Location = new Point(256, 55);
-            miscellaneousCalendar.Margin = new Padding(13, 15, 13, 15);
+            miscellaneousCalendar.Location = new Point(179, 33);
             miscellaneousCalendar.Name = "miscellaneousCalendar";
             miscellaneousCalendar.TabIndex = 2;
             miscellaneousCalendar.DateChanged += miscellaneousCalendar_DateChanged;
@@ -68,10 +66,9 @@
             // miscellaneousCancelBtn
             // 
             miscellaneousCancelBtn.BackColor = Color.IndianRed;
-            miscellaneousCancelBtn.Location = new Point(113, 418);
-            miscellaneousCancelBtn.Margin = new Padding(4, 5, 4, 5);
+            miscellaneousCancelBtn.Location = new Point(79, 251);
             miscellaneousCancelBtn.Name = "miscellaneousCancelBtn";
-            miscellaneousCancelBtn.Size = new Size(144, 63);
+            miscellaneousCancelBtn.Size = new Size(101, 38);
             miscellaneousCancelBtn.TabIndex = 3;
             miscellaneousCancelBtn.Text = "Cancel";
             miscellaneousCancelBtn.UseVisualStyleBackColor = false;
@@ -81,67 +78,64 @@
             // 
             miscellaneousEnterBtn.BackColor = Color.YellowGreen;
             miscellaneousEnterBtn.Cursor = Cursors.Hand;
-            miscellaneousEnterBtn.Location = new Point(349, 418);
-            miscellaneousEnterBtn.Margin = new Padding(4, 5, 4, 5);
+            miscellaneousEnterBtn.Location = new Point(244, 251);
             miscellaneousEnterBtn.Name = "miscellaneousEnterBtn";
-            miscellaneousEnterBtn.Size = new Size(144, 63);
+            miscellaneousEnterBtn.Size = new Size(101, 38);
             miscellaneousEnterBtn.TabIndex = 4;
             miscellaneousEnterBtn.Text = "Enter";
             miscellaneousEnterBtn.UseVisualStyleBackColor = false;
             miscellaneousEnterBtn.Click += miscellaneousEnterBtn_Click;
             // 
-            // miscNoteLabel
+            // miscellaneousNoteLabel
             // 
-            miscNoteLabel.AutoSize = true;
-            miscNoteLabel.Font = new Font("Segoe UI", 10F);
-            miscNoteLabel.Location = new Point(36, 155);
-            miscNoteLabel.Margin = new Padding(0);
-            miscNoteLabel.Name = "miscNoteLabel";
-            miscNoteLabel.Size = new Size(60, 28);
-            miscNoteLabel.TabIndex = 6;
-            miscNoteLabel.Text = "Note:";
-            miscNoteLabel.TextAlign = ContentAlignment.MiddleLeft;
+            miscellaneousNoteLabel.AutoSize = true;
+            miscellaneousNoteLabel.Font = new Font("Segoe UI", 10F);
+            miscellaneousNoteLabel.Location = new Point(25, 93);
+            miscellaneousNoteLabel.Margin = new Padding(0);
+            miscellaneousNoteLabel.Name = "miscellaneousNoteLabel";
+            miscellaneousNoteLabel.Size = new Size(42, 19);
+            miscellaneousNoteLabel.TabIndex = 6;
+            miscellaneousNoteLabel.Text = "Note:";
+            miscellaneousNoteLabel.TextAlign = ContentAlignment.MiddleLeft;
             // 
-            // miscNoteInput
+            // miscellaneousNoteInput
             // 
-            miscNoteInput.Location = new Point(36, 193);
-            miscNoteInput.Margin = new Padding(4, 5, 4, 5);
-            miscNoteInput.MaxLength = 100;
-            miscNoteInput.Multiline = true;
-            miscNoteInput.Name = "miscNoteInput";
-            miscNoteInput.ScrollBars = ScrollBars.Vertical;
-            miscNoteInput.Size = new Size(201, 129);
-            miscNoteInput.TabIndex = 5;
+            miscellaneousNoteInput.Location = new Point(25, 116);
+            miscellaneousNoteInput.MaxLength = 100;
+            miscellaneousNoteInput.Multiline = true;
+            miscellaneousNoteInput.Name = "miscellaneousNoteInput";
+            miscellaneousNoteInput.ScrollBars = ScrollBars.Vertical;
+            miscellaneousNoteInput.Size = new Size(142, 79);
+            miscellaneousNoteInput.TabIndex = 5;
             // 
-            // miscellaneousInputPopUp
+            // MiscellaneousInputPopUp
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(606, 535);
-            Controls.Add(miscNoteLabel);
-            Controls.Add(miscNoteInput);
+            ClientSize = new Size(424, 321);
+            Controls.Add(miscellaneousNoteLabel);
+            Controls.Add(miscellaneousNoteInput);
             Controls.Add(miscellaneousEnterBtn);
             Controls.Add(miscellaneousCancelBtn);
             Controls.Add(miscellaneousCalendar);
-            Controls.Add(miscExpensesAmountLabel);
-            Controls.Add(miscExpensesAmountInput);
-            Margin = new Padding(4, 5, 4, 5);
+            Controls.Add(miscellaneousExpensesAmountLabel);
+            Controls.Add(miscellaneousExpensesAmountInput);
             MaximizeBox = false;
-            Name = "miscellaneousInputPopUp";
+            Name = "MiscellaneousInputPopUp";
             StartPosition = FormStartPosition.CenterParent;
-            Text = "miscellaneous";
+            Text = "Miscellaneous";
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private TextBox miscExpensesAmountInput;
-        private Label miscExpensesAmountLabel;
+        private TextBox miscellaneousExpensesAmountInput;
+        private Label miscellaneousExpensesAmountLabel;
         private MonthCalendar miscellaneousCalendar;
         private Button miscellaneousCancelBtn;
         private Button miscellaneousEnterBtn;
-        private Label miscNoteLabel;
-        private TextBox miscNoteInput;
+        private Label miscellaneousNoteLabel;
+        private TextBox miscellaneousNoteInput;
     }
 }

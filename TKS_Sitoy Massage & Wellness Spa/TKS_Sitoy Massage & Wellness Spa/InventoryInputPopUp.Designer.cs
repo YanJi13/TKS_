@@ -152,7 +152,7 @@
             MaximizeBox = false;
             Name = "InventoryInputPopUp";
             StartPosition = FormStartPosition.CenterParent;
-            Text = "inventory";
+            Text = "Inventory";
             ResumeLayout(false);
             PerformLayout();
         }

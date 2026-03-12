@@ -23,32 +23,25 @@ namespace TKS_Sitoy_Massage___Wellness_Spa
 
         private void miscellaneousEnterBtn_Click(object sender, EventArgs e)
         {
-            // 1. Check if empty
-            if (string.IsNullOrWhiteSpace(miscExpensesAmountInput.Text))
+            // Check if empty
+            if (string.IsNullOrWhiteSpace(miscellaneousExpensesAmountInput.Text))
             {
                 MessageBox.Show("Please enter an amount.");
                 return;
             }
 
-            // 2. NEW: Check if it's a valid decimal number
+            // NEW: Check if it's a valid decimal number
             // This handles the decimal(10,2) requirement
-            if (!decimal.TryParse(miscExpensesAmountInput.Text, out decimal validatedAmount))
+            if (!decimal.TryParse(miscellaneousExpensesAmountInput.Text, out decimal validatedAmount))
             {
                 MessageBox.Show("Please enter a valid number (e.g., 50.00). Do not include symbols like $.", "Invalid Amount", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-
-            // 3. Check Date
-            if (!dateWasSelected)
-            {
-                MessageBox.Show("Please select a date.");
                 return;
             }
 
             dbCon db = new dbCon();
             string selectedDate = miscellaneousCalendar.SelectionStart.ToString("yyyy-MM-dd");
 
-            if (string.IsNullOrWhiteSpace(miscExpensesAmountInput.Text))
+            if (string.IsNullOrWhiteSpace(miscellaneousExpensesAmountInput.Text))
             {
                 MessageBox.Show("Please enter a valid number (e.g., 50.00). Do not include symbols like $.", "Invalid Amount", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -58,7 +51,7 @@ namespace TKS_Sitoy_Massage___Wellness_Spa
             {
                 db.OpenConnection();
 
-                // 1. Get all Attendance IDs for the people present on this date
+                // Get all Attendance IDs for the people present on this date
                 string getIdsQuery = "SELECT attendance_id FROM therapist_attendance WHERE date = @date";
                 MySqlCommand getIdsCmd = new MySqlCommand(getIdsQuery, db.connection);
                 getIdsCmd.Parameters.AddWithValue("@date", selectedDate);
@@ -72,21 +65,21 @@ namespace TKS_Sitoy_Massage___Wellness_Spa
                     }
                 }
 
-                // 2. Check if anyone is actually present
+                // Check if anyone is actually present
                 if (presentIds.Count == 0)
                 {
                     MessageBox.Show("No therapists are marked as present for this date. Expense cannot be recorded.");
                     return;
                 }
 
-                // 3. Loop through each ID and record the expense
+                // Loop through each ID and record the expense
                 foreach (int attId in presentIds)
                 {
                     string insertMisc = "INSERT INTO misc_expenses (misc_expenses, notes, attendance_id) VALUES (@amount, @notes, @attId)";
                     MySqlCommand insertCmd = new MySqlCommand(insertMisc, db.connection);
 
-                    insertCmd.Parameters.AddWithValue("@amount", miscExpensesAmountInput.Text);
-                    insertCmd.Parameters.AddWithValue("@notes", string.IsNullOrWhiteSpace(miscNoteInput.Text) ? (object)DBNull.Value : miscNoteInput.Text);
+                    insertCmd.Parameters.AddWithValue("@amount", miscellaneousExpensesAmountInput.Text);
+                    insertCmd.Parameters.AddWithValue("@notes", string.IsNullOrWhiteSpace(miscellaneousNoteInput.Text) ? (object)DBNull.Value : miscellaneousNoteInput.Text);
                     insertCmd.Parameters.AddWithValue("@attId", attId);
 
                     insertCmd.ExecuteNonQuery();
