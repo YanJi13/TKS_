@@ -119,15 +119,15 @@ namespace TKS_Sitoy_Massage___Wellness_Spa
                 db.OpenConnection();
                 adapter.Fill(dt);
 
-                inventoryPanelGridView.AutoGenerateColumns = false;
 
-                // 3. Link your DESIGNER columns to the SQL names
+
+                // Link your DESIGNER columns to the SQL names
                 inventoryPanelGridView.Columns["inventoryDateHeader"].DataPropertyName = "d";
                 inventoryPanelGridView.Columns["inventoryOilHeader"].DataPropertyName = "o";
                 inventoryPanelGridView.Columns["inventoryTowelHeader"].DataPropertyName = "t";
                 inventoryPanelGridView.Columns["inventoryBedSheetHeader"].DataPropertyName = "b";
 
-                // 4. Set the source
+                // Set the source
                 inventoryPanelGridView.DataSource = dt;
             }
             catch (Exception ex) { MessageBox.Show(ex.Message); }
