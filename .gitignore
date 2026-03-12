@@ -3,3 +3,9 @@
 ################################################################################
 
 /TKS_Sitoy Massage & Wellness Spa/.vs/TKS_Sitoy Massage & Wellness Spa.slnx
+bin/
+obj/
+.vs/
+*.user
+*.suo
+*.cache
