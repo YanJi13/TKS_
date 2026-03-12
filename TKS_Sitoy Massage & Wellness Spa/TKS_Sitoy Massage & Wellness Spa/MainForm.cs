@@ -14,6 +14,8 @@ namespace TKS_Sitoy_Massage___Wellness_Spa
         {
             LoadInventoryGrid();
             LoadAppointmentGrid();
+            LoadAttendanceGrid();
+            LoadMiscGrid();
         }
 
         private void showAttendancePanel(object sender, EventArgs e)
@@ -100,38 +102,38 @@ namespace TKS_Sitoy_Massage___Wellness_Spa
         {
 
         }
-        public void LoadInventoryGrid()
+        public void LoadAttendanceGrid()
         {
             dbCon db = new dbCon();
             try
             {
-                // We match the AS names to your Column DataPropertyNames
-                string query = @"SELECT 
-                            inventory_date AS d, 
-                            CASE WHEN oil = 1 THEN 'Oil' ELSE '-' END AS o, 
-                            CASE WHEN towel = 1 THEN 'Towel' ELSE '-' END AS t, 
-                            CASE WHEN bedsheet = 1 THEN 'Bed Sheet' ELSE '-' END AS b 
-                         FROM inventory";
+                string query = "SELECT attendance_id AS i, date AS d, therapist_name AS tn FROM therapist_attendance ORDER BY date DESC";
 
                 MySqlDataAdapter adapter = new MySqlDataAdapter(query, db.connection);
                 DataTable dt = new DataTable();
-
                 db.OpenConnection();
                 adapter.Fill(dt);
 
 
+                attendancePanelGridView.AutoGenerateColumns = false;
 
-                // Link your DESIGNER columns to the SQL names
-                inventoryPanelGridView.Columns["inventoryDateHeader"].DataPropertyName = "d";
-                inventoryPanelGridView.Columns["inventoryOilHeader"].DataPropertyName = "o";
-                inventoryPanelGridView.Columns["inventoryTowelHeader"].DataPropertyName = "t";
-                inventoryPanelGridView.Columns["inventoryBedSheetHeader"].DataPropertyName = "b";
+                // Map data to your specific headers (matching your screenshot)
+                attendancePanelGridView.Columns["attendanceIdHeader"].DataPropertyName = "i";
+                attendancePanelGridView.Columns["attendanceDateHeader"].DataPropertyName = "d";
+                attendancePanelGridView.Columns["attendanceNameHeader"].DataPropertyName = "tn";
 
-                // Set the source
-                inventoryPanelGridView.DataSource = dt;
+                // Bind the data
+                attendancePanelGridView.DataSource = dt;
             }
-            catch (Exception ex) { MessageBox.Show(ex.Message); }
-            finally { db.CloseConnection(); }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error loading Attendance: " + ex.Message);
+            }
+            finally
+            {
+                db.CloseConnection();
+
+            }
         }
         public void LoadAppointmentGrid()
         {
@@ -139,8 +141,9 @@ namespace TKS_Sitoy_Massage___Wellness_Spa
             try
             {
                 string query = @"SELECT 
+                            a.appointment_id AS i,
                             t.date AS d, 
-                            t.therapist_name AS n, 
+                            t.therapist_name AS tn, 
                             a.service_type AS s, 
                             a.commission AS c 
                          FROM appointment a 
@@ -152,11 +155,9 @@ namespace TKS_Sitoy_Massage___Wellness_Spa
 
                 db.OpenConnection();
                 adapter.Fill(dt);
-
-                appointmentsPanelGridView.AutoGenerateColumns = false;
-
+                appointmentsPanelGridView.Columns["appointmentsIdHeader"].DataPropertyName = "i";
                 appointmentsPanelGridView.Columns["appointmentsDateHeader"].DataPropertyName = "d";
-                appointmentsPanelGridView.Columns["appointmentsNameHeader"].DataPropertyName = "n";
+                appointmentsPanelGridView.Columns["appointmentsNameHeader"].DataPropertyName = "tn";
                 appointmentsPanelGridView.Columns["appointmentsServiceHeader"].DataPropertyName = "s";
                 appointmentsPanelGridView.Columns["appointmentsCommissionHeader"].DataPropertyName = "c";
 
@@ -170,6 +171,76 @@ namespace TKS_Sitoy_Massage___Wellness_Spa
             {
                 db.CloseConnection();
             }
+        }
+        public void LoadInventoryGrid()
+        {
+            dbCon db = new dbCon();
+            try
+            {
+                string query = @"SELECT 
+                            inventory_id AS i,
+                            inventory_date AS d, 
+                            CASE WHEN oil = 1 THEN 'Oil' ELSE '-' END AS o, 
+                            CASE WHEN towel = 1 THEN 'Towel' ELSE '-' END AS t, 
+                            CASE WHEN bedsheet = 1 THEN 'Bed Sheet' ELSE '-' END AS b 
+                         FROM inventory";
+
+                MySqlDataAdapter adapter = new MySqlDataAdapter(query, db.connection);
+                DataTable dt = new DataTable();
+
+                db.OpenConnection();
+                adapter.Fill(dt);
+
+                // Link your DESIGNER columns to the SQL names
+                inventoryPanelGridView.Columns["inventoryIdHeader"].DataPropertyName = "i";
+                inventoryPanelGridView.Columns["inventoryDateHeader"].DataPropertyName = "d";
+                inventoryPanelGridView.Columns["inventoryOilHeader"].DataPropertyName = "o";
+                inventoryPanelGridView.Columns["inventoryTowelHeader"].DataPropertyName = "t";
+                inventoryPanelGridView.Columns["inventoryBedSheetHeader"].DataPropertyName = "b";
+
+                // Set the source
+                inventoryPanelGridView.DataSource = dt;
+            }
+            catch (Exception ex) { MessageBox.Show(ex.Message); }
+            finally { db.CloseConnection(); }
+        }
+        public void LoadMiscGrid()
+        {
+            dbCon db = new dbCon();
+            try
+            {
+
+                string query = @"SELECT 
+                            m.misc_expenses_id AS i,
+                            t.date AS d, 
+                            m.misc_expenses AS me 
+                         FROM misc_expenses m 
+                         JOIN therapist_attendance t ON m.attendance_id = t.attendance_id 
+                         ORDER BY t.date DESC";
+
+                MySqlDataAdapter adapter = new MySqlDataAdapter(query, db.connection);
+                DataTable dt = new DataTable();
+                db.OpenConnection();
+                adapter.Fill(dt);
+
+                // Mapping to your specific Designer Headers
+                miscellaneousPanelGridView.Columns["miscellaneousIdHeader"].DataPropertyName = "i";
+                miscellaneousPanelGridView.Columns["miscellaneousDateHeader"].DataPropertyName = "d";
+                miscellaneousPanelGridView.Columns["miscellaneousAmount"].DataPropertyName = "me";
+
+
+                miscellaneousPanelGridView.DataSource = dt;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error loading Miscellaneous: " + ex.Message);
+            }
+            finally { db.CloseConnection(); }
+        }
+
+        private void attendancePanelGridView_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            
         }
     }
 }

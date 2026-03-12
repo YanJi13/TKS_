@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TKS_Sitoy Massage & Wellness Spa")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2051703fe457a349beeb67adad2c412d39ac072b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+114ba2d87c9cb947191724d436f22b28331827d9")]
 [assembly: System.Reflection.AssemblyProductAttribute("TKS_Sitoy Massage & Wellness Spa")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TKS_Sitoy Massage & Wellness Spa")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
