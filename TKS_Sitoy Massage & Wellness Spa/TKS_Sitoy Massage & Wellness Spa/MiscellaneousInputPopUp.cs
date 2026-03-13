@@ -98,7 +98,6 @@ namespace TKS_Sitoy_Massage___Wellness_Spa
 
         }
         
-
         private void miscellaneousCalendar_DateChanged(object sender, DateRangeEventArgs e)
         {
             dateWasSelected = true;
