@@ -52,6 +52,7 @@
             // 
             appointmentsNameLabel.AutoSize = true;
             appointmentsNameLabel.Font = new Font("Segoe UI", 9F);
+            appointmentsNameLabel.ForeColor = Color.FromArgb(236, 239, 244);
             appointmentsNameLabel.Location = new Point(25, 33);
             appointmentsNameLabel.Margin = new Padding(0);
             appointmentsNameLabel.Name = "appointmentsNameLabel";
@@ -62,14 +63,18 @@
             // 
             // appointmentsCalendar
             // 
+            appointmentsCalendar.BackColor = Color.FromArgb(129, 161, 193);
             appointmentsCalendar.Location = new Point(179, 33);
             appointmentsCalendar.Name = "appointmentsCalendar";
             appointmentsCalendar.TabIndex = 2;
+            appointmentsCalendar.TitleForeColor = Color.FromArgb(129, 161, 193);
+            appointmentsCalendar.TrailingForeColor = Color.FromArgb(129, 161, 193);
             appointmentsCalendar.DateChanged += appointmentsCalendar_DateChanged;
             // 
             // appointmentsCancelBtn
             // 
-            appointmentsCancelBtn.BackColor = Color.IndianRed;
+            appointmentsCancelBtn.BackColor = Color.FromArgb(191, 97, 106);
+            appointmentsCancelBtn.FlatStyle = FlatStyle.Popup;
             appointmentsCancelBtn.Location = new Point(79, 251);
             appointmentsCancelBtn.Name = "appointmentsCancelBtn";
             appointmentsCancelBtn.Size = new Size(101, 38);
@@ -80,8 +85,9 @@
             // 
             // appointmentsEnterBtn
             // 
-            appointmentsEnterBtn.BackColor = Color.YellowGreen;
+            appointmentsEnterBtn.BackColor = Color.FromArgb(145, 188, 143);
             appointmentsEnterBtn.Cursor = Cursors.Hand;
+            appointmentsEnterBtn.FlatStyle = FlatStyle.Popup;
             appointmentsEnterBtn.Location = new Point(244, 251);
             appointmentsEnterBtn.Name = "appointmentsEnterBtn";
             appointmentsEnterBtn.Size = new Size(101, 38);
@@ -94,6 +100,7 @@
             // 
             appointmentsServiceTypeLabel.AutoSize = true;
             appointmentsServiceTypeLabel.Font = new Font("Segoe UI", 9F);
+            appointmentsServiceTypeLabel.ForeColor = Color.FromArgb(236, 239, 244);
             appointmentsServiceTypeLabel.Location = new Point(25, 76);
             appointmentsServiceTypeLabel.Margin = new Padding(0);
             appointmentsServiceTypeLabel.Name = "appointmentsServiceTypeLabel";
@@ -113,6 +120,7 @@
             // 
             appointmentsCommissionLabel.AutoSize = true;
             appointmentsCommissionLabel.Font = new Font("Segoe UI", 9F);
+            appointmentsCommissionLabel.ForeColor = Color.FromArgb(236, 239, 244);
             appointmentsCommissionLabel.Location = new Point(25, 164);
             appointmentsCommissionLabel.Margin = new Padding(0);
             appointmentsCommissionLabel.Name = "appointmentsCommissionLabel";
@@ -132,6 +140,7 @@
             // 
             appointmentsPaymentLabel.AutoSize = true;
             appointmentsPaymentLabel.Font = new Font("Segoe UI", 9F);
+            appointmentsPaymentLabel.ForeColor = Color.FromArgb(236, 239, 244);
             appointmentsPaymentLabel.Location = new Point(25, 120);
             appointmentsPaymentLabel.Margin = new Padding(0);
             appointmentsPaymentLabel.Name = "appointmentsPaymentLabel";
@@ -147,10 +156,11 @@
             appointmentsPaymentInput.Size = new Size(127, 23);
             appointmentsPaymentInput.TabIndex = 10;
             // 
-            // appointmentsInputPopUp
+            // AppointmentsInputPopUp
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(70, 79, 99);
             ClientSize = new Size(424, 321);
             Controls.Add(appointmentsPaymentInput);
             Controls.Add(appointmentsPaymentLabel);
@@ -164,7 +174,7 @@
             Controls.Add(appointmentsNameLabel);
             Controls.Add(appointmentsNameInput);
             MaximizeBox = false;
-            Name = "appointmentsInputPopUp";
+            Name = "AppointmentsInputPopUp";
             StartPosition = FormStartPosition.CenterParent;
             Text = "Appointments";
             ResumeLayout(false);

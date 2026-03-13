@@ -45,6 +45,7 @@
             // 
             attendanceNameEditLabel.AutoSize = true;
             attendanceNameEditLabel.Font = new Font("Segoe UI", 10F);
+            attendanceNameEditLabel.ForeColor = Color.FromArgb(236, 239, 244);
             attendanceNameEditLabel.Location = new Point(77, 69);
             attendanceNameEditLabel.Name = "attendanceNameEditLabel";
             attendanceNameEditLabel.Size = new Size(45, 19);
@@ -53,7 +54,8 @@
             // 
             // attendanceEditYesBtn
             // 
-            attendanceEditYesBtn.BackColor = Color.YellowGreen;
+            attendanceEditYesBtn.BackColor = Color.FromArgb(145, 188, 143);
+            attendanceEditYesBtn.FlatStyle = FlatStyle.Popup;
             attendanceEditYesBtn.Location = new Point(184, 155);
             attendanceEditYesBtn.Name = "attendanceEditYesBtn";
             attendanceEditYesBtn.Size = new Size(101, 38);
@@ -63,7 +65,8 @@
             // 
             // attendanceEditNoBtn
             // 
-            attendanceEditNoBtn.BackColor = Color.IndianRed;
+            attendanceEditNoBtn.BackColor = Color.FromArgb(191, 97, 106);
+            attendanceEditNoBtn.FlatStyle = FlatStyle.Popup;
             attendanceEditNoBtn.Location = new Point(42, 155);
             attendanceEditNoBtn.Name = "attendanceEditNoBtn";
             attendanceEditNoBtn.Size = new Size(101, 38);
@@ -75,6 +78,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(70, 79, 99);
             ClientSize = new Size(326, 235);
             Controls.Add(attendanceEditYesBtn);
             Controls.Add(attendanceEditNoBtn);

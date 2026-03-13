@@ -35,7 +35,8 @@
             // 
             // miscellaneousDeleteNoBtn
             // 
-            miscellaneousDeleteNoBtn.BackColor = Color.IndianRed;
+            miscellaneousDeleteNoBtn.BackColor = Color.FromArgb(191, 97, 106);
+            miscellaneousDeleteNoBtn.FlatStyle = FlatStyle.Popup;
             miscellaneousDeleteNoBtn.Location = new Point(36, 83);
             miscellaneousDeleteNoBtn.Name = "miscellaneousDeleteNoBtn";
             miscellaneousDeleteNoBtn.Size = new Size(101, 38);
@@ -45,7 +46,8 @@
             // 
             // miscellaneousDeleteYesBtn
             // 
-            miscellaneousDeleteYesBtn.BackColor = Color.YellowGreen;
+            miscellaneousDeleteYesBtn.BackColor = Color.FromArgb(145, 188, 143);
+            miscellaneousDeleteYesBtn.FlatStyle = FlatStyle.Popup;
             miscellaneousDeleteYesBtn.Location = new Point(178, 83);
             miscellaneousDeleteYesBtn.Name = "miscellaneousDeleteYesBtn";
             miscellaneousDeleteYesBtn.Size = new Size(101, 38);
@@ -57,21 +59,23 @@
             // 
             miscellaneousDeleteLabel.AutoSize = true;
             miscellaneousDeleteLabel.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            miscellaneousDeleteLabel.ForeColor = Color.FromArgb(236, 239, 244);
             miscellaneousDeleteLabel.Location = new Point(84, 41);
             miscellaneousDeleteLabel.Name = "miscellaneousDeleteLabel";
             miscellaneousDeleteLabel.Size = new Size(142, 21);
             miscellaneousDeleteLabel.TabIndex = 2;
             miscellaneousDeleteLabel.Text = "Confirm Deletion?";
             // 
-            // miscellaneousDeletePopup
+            // MiscellaneousDeletePopup
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(70, 79, 99);
             ClientSize = new Size(310, 182);
             Controls.Add(miscellaneousDeleteLabel);
             Controls.Add(miscellaneousDeleteYesBtn);
             Controls.Add(miscellaneousDeleteNoBtn);
-            Name = "miscellaneousDeletePopup";
+            Name = "MiscellaneousDeletePopup";
             Text = "Delete Confirmation";
             ResumeLayout(false);
             PerformLayout();

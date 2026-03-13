@@ -104,12 +104,15 @@
             // 
             // attendancePanelSearchBtn
             // 
+            attendancePanelSearchBtn.BackColor = Color.FromArgb(129, 161, 193);
+            attendancePanelSearchBtn.FlatStyle = FlatStyle.Popup;
+            attendancePanelSearchBtn.ForeColor = Color.FromArgb(236, 239, 244);
             attendancePanelSearchBtn.Location = new Point(364, 60);
             attendancePanelSearchBtn.Name = "attendancePanelSearchBtn";
             attendancePanelSearchBtn.Size = new Size(107, 38);
             attendancePanelSearchBtn.TabIndex = 6;
             attendancePanelSearchBtn.Text = "Search";
-            attendancePanelSearchBtn.UseVisualStyleBackColor = true;
+            attendancePanelSearchBtn.UseVisualStyleBackColor = false;
             // 
             // attendancePanelSearchBar
             // 
@@ -120,18 +123,22 @@
             // 
             // attendancePanelInputBtn
             // 
+            attendancePanelInputBtn.BackColor = Color.FromArgb(129, 161, 193);
+            attendancePanelInputBtn.FlatStyle = FlatStyle.Popup;
+            attendancePanelInputBtn.ForeColor = Color.FromArgb(236, 239, 244);
             attendancePanelInputBtn.Location = new Point(9, 60);
             attendancePanelInputBtn.Name = "attendancePanelInputBtn";
             attendancePanelInputBtn.Size = new Size(107, 38);
             attendancePanelInputBtn.TabIndex = 4;
             attendancePanelInputBtn.Text = "Input";
-            attendancePanelInputBtn.UseVisualStyleBackColor = true;
+            attendancePanelInputBtn.UseVisualStyleBackColor = false;
             attendancePanelInputBtn.Click += showAttendancePopup;
             // 
             // attendancePanelGridView
             // 
             attendancePanelGridView.AllowUserToAddRows = false;
             attendancePanelGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            attendancePanelGridView.BackgroundColor = Color.FromArgb(70, 79, 99);
             attendancePanelGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             attendancePanelGridView.Columns.AddRange(new DataGridViewColumn[] { attendanceIdHeader, attendanceDateHeader, attendanceNameHeader, attendanceDeleteBtn, attendanceEditBtn });
             attendancePanelGridView.Location = new Point(9, 120);
@@ -180,46 +187,59 @@
             // 
             // attendanceSideBtn
             // 
+            attendanceSideBtn.BackColor = Color.FromArgb(129, 161, 193);
+            attendanceSideBtn.FlatStyle = FlatStyle.Popup;
+            attendanceSideBtn.ForeColor = Color.FromArgb(236, 239, 244);
             attendanceSideBtn.Location = new Point(21, 118);
             attendanceSideBtn.Name = "attendanceSideBtn";
             attendanceSideBtn.Size = new Size(150, 45);
             attendanceSideBtn.TabIndex = 0;
             attendanceSideBtn.Text = "Attendance";
-            attendanceSideBtn.UseVisualStyleBackColor = true;
+            attendanceSideBtn.UseVisualStyleBackColor = false;
             attendanceSideBtn.Click += showAttendancePanel;
             // 
             // appointmentsSideBtn
             // 
+            appointmentsSideBtn.BackColor = Color.FromArgb(129, 161, 193);
+            appointmentsSideBtn.FlatStyle = FlatStyle.Popup;
+            appointmentsSideBtn.ForeColor = Color.FromArgb(236, 239, 244);
             appointmentsSideBtn.Location = new Point(21, 178);
             appointmentsSideBtn.Name = "appointmentsSideBtn";
             appointmentsSideBtn.Size = new Size(150, 45);
             appointmentsSideBtn.TabIndex = 1;
             appointmentsSideBtn.Text = "Appointments";
-            appointmentsSideBtn.UseVisualStyleBackColor = true;
+            appointmentsSideBtn.UseVisualStyleBackColor = false;
             appointmentsSideBtn.Click += showAppointmentsPanel;
             // 
             // inventorySideBtn
             // 
+            inventorySideBtn.BackColor = Color.FromArgb(129, 161, 193);
+            inventorySideBtn.FlatStyle = FlatStyle.Popup;
+            inventorySideBtn.ForeColor = Color.FromArgb(236, 239, 244);
             inventorySideBtn.Location = new Point(21, 238);
             inventorySideBtn.Name = "inventorySideBtn";
             inventorySideBtn.Size = new Size(150, 45);
             inventorySideBtn.TabIndex = 2;
             inventorySideBtn.Text = "Inventory";
-            inventorySideBtn.UseVisualStyleBackColor = true;
+            inventorySideBtn.UseVisualStyleBackColor = false;
             inventorySideBtn.Click += showInventoryPanel;
             // 
             // miscSideBtn
             // 
+            miscSideBtn.BackColor = Color.FromArgb(129, 161, 193);
+            miscSideBtn.FlatStyle = FlatStyle.Popup;
+            miscSideBtn.ForeColor = Color.FromArgb(236, 239, 244);
             miscSideBtn.Location = new Point(21, 298);
             miscSideBtn.Name = "miscSideBtn";
             miscSideBtn.Size = new Size(150, 45);
             miscSideBtn.TabIndex = 3;
             miscSideBtn.Text = "Miscellaneous";
-            miscSideBtn.UseVisualStyleBackColor = true;
+            miscSideBtn.UseVisualStyleBackColor = false;
             miscSideBtn.Click += showMiscPanel;
             // 
             // sidebarPanel
             // 
+            sidebarPanel.BackColor = Color.FromArgb(59, 66, 82);
             sidebarPanel.Controls.Add(attendanceSideBtn);
             sidebarPanel.Controls.Add(appointmentsSideBtn);
             sidebarPanel.Controls.Add(inventorySideBtn);
@@ -244,12 +264,15 @@
             // 
             // appointmentsPanelSearchBtn
             // 
+            appointmentsPanelSearchBtn.BackColor = Color.FromArgb(129, 161, 193);
+            appointmentsPanelSearchBtn.FlatStyle = FlatStyle.Popup;
+            appointmentsPanelSearchBtn.ForeColor = Color.FromArgb(236, 239, 244);
             appointmentsPanelSearchBtn.Location = new Point(364, 60);
             appointmentsPanelSearchBtn.Name = "appointmentsPanelSearchBtn";
             appointmentsPanelSearchBtn.Size = new Size(107, 38);
             appointmentsPanelSearchBtn.TabIndex = 6;
             appointmentsPanelSearchBtn.Text = "Search";
-            appointmentsPanelSearchBtn.UseVisualStyleBackColor = true;
+            appointmentsPanelSearchBtn.UseVisualStyleBackColor = false;
             // 
             // appointmentsPanelSearchBar
             // 
@@ -260,18 +283,22 @@
             // 
             // appointmentsPanelInputBtn
             // 
+            appointmentsPanelInputBtn.BackColor = Color.FromArgb(129, 161, 193);
+            appointmentsPanelInputBtn.FlatStyle = FlatStyle.Popup;
+            appointmentsPanelInputBtn.ForeColor = Color.FromArgb(236, 239, 244);
             appointmentsPanelInputBtn.Location = new Point(9, 60);
             appointmentsPanelInputBtn.Name = "appointmentsPanelInputBtn";
             appointmentsPanelInputBtn.Size = new Size(107, 38);
             appointmentsPanelInputBtn.TabIndex = 4;
             appointmentsPanelInputBtn.Text = "Input";
-            appointmentsPanelInputBtn.UseVisualStyleBackColor = true;
+            appointmentsPanelInputBtn.UseVisualStyleBackColor = false;
             appointmentsPanelInputBtn.Click += showAppointmentsPopup;
             // 
             // appointmentsPanelGridView
             // 
             appointmentsPanelGridView.AllowUserToAddRows = false;
             appointmentsPanelGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            appointmentsPanelGridView.BackgroundColor = Color.FromArgb(70, 79, 99);
             appointmentsPanelGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             appointmentsPanelGridView.Columns.AddRange(new DataGridViewColumn[] { appointmentsIdHeader, appointmentsDateHeader, appointmentsNameHeader, appointmentsServiceHeader, appointmentsPaymentHeader, appointmentsCommissionHeader, appointmentsDeleteBtn, appointmentsEditBtn });
             appointmentsPanelGridView.Location = new Point(9, 120);
@@ -347,12 +374,15 @@
             // 
             // inventoryPanelSearchBtn
             // 
+            inventoryPanelSearchBtn.BackColor = Color.FromArgb(129, 161, 193);
+            inventoryPanelSearchBtn.FlatStyle = FlatStyle.Popup;
+            inventoryPanelSearchBtn.ForeColor = Color.FromArgb(236, 239, 244);
             inventoryPanelSearchBtn.Location = new Point(364, 60);
             inventoryPanelSearchBtn.Name = "inventoryPanelSearchBtn";
             inventoryPanelSearchBtn.Size = new Size(107, 38);
             inventoryPanelSearchBtn.TabIndex = 6;
             inventoryPanelSearchBtn.Text = "Search";
-            inventoryPanelSearchBtn.UseVisualStyleBackColor = true;
+            inventoryPanelSearchBtn.UseVisualStyleBackColor = false;
             // 
             // inventoryPanelSearchBar
             // 
@@ -363,18 +393,22 @@
             // 
             // inventoryPanelInputBtn
             // 
+            inventoryPanelInputBtn.BackColor = Color.FromArgb(129, 161, 193);
+            inventoryPanelInputBtn.FlatStyle = FlatStyle.Popup;
+            inventoryPanelInputBtn.ForeColor = Color.FromArgb(236, 239, 244);
             inventoryPanelInputBtn.Location = new Point(9, 60);
             inventoryPanelInputBtn.Name = "inventoryPanelInputBtn";
             inventoryPanelInputBtn.Size = new Size(107, 38);
             inventoryPanelInputBtn.TabIndex = 4;
             inventoryPanelInputBtn.Text = "Input";
-            inventoryPanelInputBtn.UseVisualStyleBackColor = true;
+            inventoryPanelInputBtn.UseVisualStyleBackColor = false;
             inventoryPanelInputBtn.Click += showInventoryPopup;
             // 
             // inventoryPanelGridView
             // 
             inventoryPanelGridView.AllowUserToAddRows = false;
             inventoryPanelGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            inventoryPanelGridView.BackgroundColor = Color.FromArgb(70, 79, 99);
             inventoryPanelGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             inventoryPanelGridView.Columns.AddRange(new DataGridViewColumn[] { inventoryIdHeader, inventoryDateHeader, inventoryOilHeader, inventoryTowelHeader, inventoryBedSheetHeader, inventoryDeleteBtn, inventoryEditBtn });
             inventoryPanelGridView.Location = new Point(9, 120);
@@ -441,12 +475,15 @@
             // 
             // miscellaneousPanelSearchBtn
             // 
+            miscellaneousPanelSearchBtn.BackColor = Color.FromArgb(129, 161, 193);
+            miscellaneousPanelSearchBtn.FlatStyle = FlatStyle.Popup;
+            miscellaneousPanelSearchBtn.ForeColor = Color.FromArgb(236, 239, 244);
             miscellaneousPanelSearchBtn.Location = new Point(364, 60);
             miscellaneousPanelSearchBtn.Name = "miscellaneousPanelSearchBtn";
             miscellaneousPanelSearchBtn.Size = new Size(107, 38);
             miscellaneousPanelSearchBtn.TabIndex = 6;
             miscellaneousPanelSearchBtn.Text = "Search";
-            miscellaneousPanelSearchBtn.UseVisualStyleBackColor = true;
+            miscellaneousPanelSearchBtn.UseVisualStyleBackColor = false;
             // 
             // miscellaneousPanelSearchBar
             // 
@@ -457,18 +494,22 @@
             // 
             // miscellaneousPanelInputBtn
             // 
+            miscellaneousPanelInputBtn.BackColor = Color.FromArgb(129, 161, 193);
+            miscellaneousPanelInputBtn.FlatStyle = FlatStyle.Popup;
+            miscellaneousPanelInputBtn.ForeColor = Color.FromArgb(236, 239, 244);
             miscellaneousPanelInputBtn.Location = new Point(9, 60);
             miscellaneousPanelInputBtn.Name = "miscellaneousPanelInputBtn";
             miscellaneousPanelInputBtn.Size = new Size(107, 38);
             miscellaneousPanelInputBtn.TabIndex = 4;
             miscellaneousPanelInputBtn.Text = "Input";
-            miscellaneousPanelInputBtn.UseVisualStyleBackColor = true;
+            miscellaneousPanelInputBtn.UseVisualStyleBackColor = false;
             miscellaneousPanelInputBtn.Click += showMiscPopup;
             // 
             // miscellaneousPanelGridView
             // 
             miscellaneousPanelGridView.AllowUserToAddRows = false;
             miscellaneousPanelGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            miscellaneousPanelGridView.BackgroundColor = Color.FromArgb(70, 79, 99);
             miscellaneousPanelGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             miscellaneousPanelGridView.Columns.AddRange(new DataGridViewColumn[] { miscellaneousIdHeader, miscellaneousDateHeader, miscellaneousAmount, miscellaneousNoteHeader, miscellaneousDeleteBtn, miscellaneousEditBtn });
             miscellaneousPanelGridView.Location = new Point(9, 120);
@@ -523,6 +564,7 @@
             // 
             AutoScaleMode = AutoScaleMode.None;
             AutoScroll = true;
+            BackColor = Color.FromArgb(46, 52, 64);
             ClientSize = new Size(1038, 547);
             Controls.Add(attendancePanel);
             Controls.Add(appointmentsPanel);

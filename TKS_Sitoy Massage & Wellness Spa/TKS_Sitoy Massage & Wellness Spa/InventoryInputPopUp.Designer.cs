@@ -43,6 +43,7 @@
             // 
             inventoryOilLabel.AutoSize = true;
             inventoryOilLabel.Font = new Font("Segoe UI", 10F);
+            inventoryOilLabel.ForeColor = Color.FromArgb(236, 239, 244);
             inventoryOilLabel.Location = new Point(33, 33);
             inventoryOilLabel.Margin = new Padding(0);
             inventoryOilLabel.Name = "inventoryOilLabel";
@@ -60,7 +61,8 @@
             // 
             // inventoryCancelBtn
             // 
-            inventoryCancelBtn.BackColor = Color.IndianRed;
+            inventoryCancelBtn.BackColor = Color.FromArgb(191, 97, 106);
+            inventoryCancelBtn.FlatStyle = FlatStyle.Popup;
             inventoryCancelBtn.Location = new Point(79, 251);
             inventoryCancelBtn.Name = "inventoryCancelBtn";
             inventoryCancelBtn.Size = new Size(101, 38);
@@ -71,8 +73,9 @@
             // 
             // inventoryEnterBtn
             // 
-            inventoryEnterBtn.BackColor = Color.YellowGreen;
+            inventoryEnterBtn.BackColor = Color.FromArgb(145, 188, 143);
             inventoryEnterBtn.Cursor = Cursors.Hand;
+            inventoryEnterBtn.FlatStyle = FlatStyle.Popup;
             inventoryEnterBtn.Location = new Point(244, 251);
             inventoryEnterBtn.Name = "inventoryEnterBtn";
             inventoryEnterBtn.Size = new Size(101, 38);
@@ -85,6 +88,7 @@
             // 
             inventoryTowelLabel.AutoSize = true;
             inventoryTowelLabel.Font = new Font("Segoe UI", 10F);
+            inventoryTowelLabel.ForeColor = Color.FromArgb(236, 239, 244);
             inventoryTowelLabel.Location = new Point(33, 69);
             inventoryTowelLabel.Margin = new Padding(0);
             inventoryTowelLabel.Name = "inventoryTowelLabel";
@@ -97,6 +101,7 @@
             // 
             inventoryBedSheetLabel.AutoSize = true;
             inventoryBedSheetLabel.Font = new Font("Segoe UI", 10F);
+            inventoryBedSheetLabel.ForeColor = Color.FromArgb(236, 239, 244);
             inventoryBedSheetLabel.Location = new Point(33, 103);
             inventoryBedSheetLabel.Margin = new Padding(0);
             inventoryBedSheetLabel.Name = "inventoryBedSheetLabel";
@@ -107,7 +112,6 @@
             // 
             // inventoryBedSheetCheck
             // 
-            inventoryBedSheetCheck.Appearance = Appearance.Button;
             inventoryBedSheetCheck.Location = new Point(116, 104);
             inventoryBedSheetCheck.Name = "inventoryBedSheetCheck";
             inventoryBedSheetCheck.Size = new Size(20, 20);
@@ -117,7 +121,6 @@
             // 
             // inventoryTowelCheck
             // 
-            inventoryTowelCheck.Appearance = Appearance.Button;
             inventoryTowelCheck.Location = new Point(116, 68);
             inventoryTowelCheck.Name = "inventoryTowelCheck";
             inventoryTowelCheck.Size = new Size(20, 20);
@@ -127,7 +130,6 @@
             // 
             // inventoryOilCheck
             // 
-            inventoryOilCheck.Appearance = Appearance.Button;
             inventoryOilCheck.Location = new Point(116, 34);
             inventoryOilCheck.Name = "inventoryOilCheck";
             inventoryOilCheck.Size = new Size(20, 20);
@@ -139,6 +141,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(70, 79, 99);
             ClientSize = new Size(424, 321);
             Controls.Add(inventoryOilCheck);
             Controls.Add(inventoryTowelCheck);

@@ -40,7 +40,8 @@
             // 
             // inventoryEditYesBtn
             // 
-            inventoryEditYesBtn.BackColor = Color.YellowGreen;
+            inventoryEditYesBtn.BackColor = Color.FromArgb(145, 188, 143);
+            inventoryEditYesBtn.FlatStyle = FlatStyle.Popup;
             inventoryEditYesBtn.Location = new Point(184, 155);
             inventoryEditYesBtn.Name = "inventoryEditYesBtn";
             inventoryEditYesBtn.Size = new Size(101, 38);
@@ -50,7 +51,8 @@
             // 
             // inventoryEditNoBtn
             // 
-            inventoryEditNoBtn.BackColor = Color.IndianRed;
+            inventoryEditNoBtn.BackColor = Color.FromArgb(191, 97, 106);
+            inventoryEditNoBtn.FlatStyle = FlatStyle.Popup;
             inventoryEditNoBtn.Location = new Point(42, 155);
             inventoryEditNoBtn.Name = "inventoryEditNoBtn";
             inventoryEditNoBtn.Size = new Size(101, 38);
@@ -92,6 +94,7 @@
             // 
             inventoryBedSheetEditLabel.AutoSize = true;
             inventoryBedSheetEditLabel.Font = new Font("Segoe UI", 10F);
+            inventoryBedSheetEditLabel.ForeColor = Color.FromArgb(236, 239, 244);
             inventoryBedSheetEditLabel.Location = new Point(97, 113);
             inventoryBedSheetEditLabel.Margin = new Padding(0);
             inventoryBedSheetEditLabel.Name = "inventoryBedSheetEditLabel";
@@ -104,6 +107,7 @@
             // 
             inventoryTowelEditLabel.AutoSize = true;
             inventoryTowelEditLabel.Font = new Font("Segoe UI", 10F);
+            inventoryTowelEditLabel.ForeColor = Color.FromArgb(236, 239, 244);
             inventoryTowelEditLabel.Location = new Point(97, 79);
             inventoryTowelEditLabel.Margin = new Padding(0);
             inventoryTowelEditLabel.Name = "inventoryTowelEditLabel";
@@ -116,6 +120,7 @@
             // 
             inventoryOilEditLabel.AutoSize = true;
             inventoryOilEditLabel.Font = new Font("Segoe UI", 10F);
+            inventoryOilEditLabel.ForeColor = Color.FromArgb(236, 239, 244);
             inventoryOilEditLabel.Location = new Point(97, 43);
             inventoryOilEditLabel.Margin = new Padding(0);
             inventoryOilEditLabel.Name = "inventoryOilEditLabel";
@@ -128,6 +133,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(70, 79, 99);
             ClientSize = new Size(326, 235);
             Controls.Add(inventoryOilEditCheck);
             Controls.Add(inventoryTowelEditCheck);

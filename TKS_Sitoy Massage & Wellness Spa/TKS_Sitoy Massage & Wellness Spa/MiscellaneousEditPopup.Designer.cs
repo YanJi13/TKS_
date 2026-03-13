@@ -47,6 +47,7 @@
             // 
             miscellaneousAmountEditLabel.AutoSize = true;
             miscellaneousAmountEditLabel.Font = new Font("Segoe UI", 10F);
+            miscellaneousAmountEditLabel.ForeColor = Color.FromArgb(236, 239, 244);
             miscellaneousAmountEditLabel.Location = new Point(31, 28);
             miscellaneousAmountEditLabel.Name = "miscellaneousAmountEditLabel";
             miscellaneousAmountEditLabel.Size = new Size(91, 19);
@@ -57,6 +58,7 @@
             // 
             miscellaneousNoteEditLabel.AutoSize = true;
             miscellaneousNoteEditLabel.Font = new Font("Segoe UI", 10F);
+            miscellaneousNoteEditLabel.ForeColor = Color.FromArgb(236, 239, 244);
             miscellaneousNoteEditLabel.Location = new Point(154, 28);
             miscellaneousNoteEditLabel.Name = "miscellaneousNoteEditLabel";
             miscellaneousNoteEditLabel.Size = new Size(39, 19);
@@ -65,7 +67,8 @@
             // 
             // miscellaneousEditYesBtn
             // 
-            miscellaneousEditYesBtn.BackColor = Color.YellowGreen;
+            miscellaneousEditYesBtn.BackColor = Color.FromArgb(145, 188, 143);
+            miscellaneousEditYesBtn.FlatStyle = FlatStyle.Flat;
             miscellaneousEditYesBtn.Location = new Point(184, 155);
             miscellaneousEditYesBtn.Name = "miscellaneousEditYesBtn";
             miscellaneousEditYesBtn.Size = new Size(101, 38);
@@ -75,7 +78,8 @@
             // 
             // miscellaneousEditNoBtn
             // 
-            miscellaneousEditNoBtn.BackColor = Color.IndianRed;
+            miscellaneousEditNoBtn.BackColor = Color.FromArgb(191, 97, 106);
+            miscellaneousEditNoBtn.FlatStyle = FlatStyle.Flat;
             miscellaneousEditNoBtn.Location = new Point(42, 155);
             miscellaneousEditNoBtn.Name = "miscellaneousEditNoBtn";
             miscellaneousEditNoBtn.Size = new Size(101, 38);
@@ -97,6 +101,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(70, 79, 99);
             ClientSize = new Size(326, 235);
             Controls.Add(miscellaneousNoteEditInput);
             Controls.Add(miscellaneousEditYesBtn);

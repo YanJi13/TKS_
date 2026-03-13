@@ -35,7 +35,8 @@
             // 
             // attendanceDeleteNoBtn
             // 
-            attendanceDeleteNoBtn.BackColor = Color.IndianRed;
+            attendanceDeleteNoBtn.BackColor = Color.FromArgb(191, 97, 106);
+            attendanceDeleteNoBtn.FlatStyle = FlatStyle.Popup;
             attendanceDeleteNoBtn.Location = new Point(36, 83);
             attendanceDeleteNoBtn.Name = "attendanceDeleteNoBtn";
             attendanceDeleteNoBtn.Size = new Size(101, 38);
@@ -45,7 +46,8 @@
             // 
             // attendanceDeleteYesBtn
             // 
-            attendanceDeleteYesBtn.BackColor = Color.YellowGreen;
+            attendanceDeleteYesBtn.BackColor = Color.FromArgb(145, 188, 143);
+            attendanceDeleteYesBtn.FlatStyle = FlatStyle.Popup;
             attendanceDeleteYesBtn.Location = new Point(178, 83);
             attendanceDeleteYesBtn.Name = "attendanceDeleteYesBtn";
             attendanceDeleteYesBtn.Size = new Size(101, 38);
@@ -57,21 +59,23 @@
             // 
             attendanceDeleteLabel.AutoSize = true;
             attendanceDeleteLabel.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            attendanceDeleteLabel.ForeColor = Color.FromArgb(236, 239, 244);
             attendanceDeleteLabel.Location = new Point(84, 41);
             attendanceDeleteLabel.Name = "attendanceDeleteLabel";
             attendanceDeleteLabel.Size = new Size(142, 21);
             attendanceDeleteLabel.TabIndex = 2;
             attendanceDeleteLabel.Text = "Confirm Deletion?";
             // 
-            // attendanceDeletePopup
+            // AttendanceDeletePopup
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(70, 79, 99);
             ClientSize = new Size(310, 182);
             Controls.Add(attendanceDeleteLabel);
             Controls.Add(attendanceDeleteYesBtn);
             Controls.Add(attendanceDeleteNoBtn);
-            Name = "attendanceDeletePopup";
+            Name = "AttendanceDeletePopup";
             Text = "Delete Confirmation";
             ResumeLayout(false);
             PerformLayout();

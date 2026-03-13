@@ -51,6 +51,7 @@
             // 
             appointmentsNameEditLabel.AutoSize = true;
             appointmentsNameEditLabel.Font = new Font("Segoe UI", 10F);
+            appointmentsNameEditLabel.ForeColor = Color.FromArgb(236, 239, 244);
             appointmentsNameEditLabel.Location = new Point(52, 28);
             appointmentsNameEditLabel.Name = "appointmentsNameEditLabel";
             appointmentsNameEditLabel.Size = new Size(45, 19);
@@ -61,6 +62,7 @@
             // 
             appointmentserviceEditLabel.AutoSize = true;
             appointmentserviceEditLabel.Font = new Font("Segoe UI", 10F);
+            appointmentserviceEditLabel.ForeColor = Color.FromArgb(236, 239, 244);
             appointmentserviceEditLabel.Location = new Point(175, 28);
             appointmentserviceEditLabel.Name = "appointmentserviceEditLabel";
             appointmentserviceEditLabel.Size = new Size(51, 19);
@@ -78,6 +80,7 @@
             // 
             appointmentsPaymentEditLabel.AutoSize = true;
             appointmentsPaymentEditLabel.Font = new Font("Segoe UI", 10F);
+            appointmentsPaymentEditLabel.ForeColor = Color.FromArgb(236, 239, 244);
             appointmentsPaymentEditLabel.Location = new Point(52, 76);
             appointmentsPaymentEditLabel.Name = "appointmentsPaymentEditLabel";
             appointmentsPaymentEditLabel.Size = new Size(63, 19);
@@ -95,6 +98,7 @@
             // 
             appointmentsCommissionEditLabel.AutoSize = true;
             appointmentsCommissionEditLabel.Font = new Font("Segoe UI", 10F);
+            appointmentsCommissionEditLabel.ForeColor = Color.FromArgb(236, 239, 244);
             appointmentsCommissionEditLabel.Location = new Point(175, 76);
             appointmentsCommissionEditLabel.Name = "appointmentsCommissionEditLabel";
             appointmentsCommissionEditLabel.Size = new Size(84, 19);
@@ -110,7 +114,8 @@
             // 
             // appointmentsEditYesBtn
             // 
-            appointmentsEditYesBtn.BackColor = Color.YellowGreen;
+            appointmentsEditYesBtn.BackColor = Color.FromArgb(145, 188, 143);
+            appointmentsEditYesBtn.FlatStyle = FlatStyle.Popup;
             appointmentsEditYesBtn.Location = new Point(184, 155);
             appointmentsEditYesBtn.Name = "appointmentsEditYesBtn";
             appointmentsEditYesBtn.Size = new Size(101, 38);
@@ -120,7 +125,8 @@
             // 
             // appointmentsEditNoBtn
             // 
-            appointmentsEditNoBtn.BackColor = Color.IndianRed;
+            appointmentsEditNoBtn.BackColor = Color.FromArgb(191, 97, 106);
+            appointmentsEditNoBtn.FlatStyle = FlatStyle.Popup;
             appointmentsEditNoBtn.Location = new Point(42, 155);
             appointmentsEditNoBtn.Name = "appointmentsEditNoBtn";
             appointmentsEditNoBtn.Size = new Size(101, 38);
@@ -132,6 +138,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(70, 79, 99);
             ClientSize = new Size(326, 235);
             Controls.Add(appointmentsEditYesBtn);
             Controls.Add(appointmentsEditNoBtn);

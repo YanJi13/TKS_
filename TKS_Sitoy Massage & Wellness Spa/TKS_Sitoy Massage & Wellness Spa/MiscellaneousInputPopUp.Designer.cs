@@ -48,6 +48,7 @@
             // 
             miscellaneousExpensesAmountLabel.AutoSize = true;
             miscellaneousExpensesAmountLabel.Font = new Font("Segoe UI", 10F);
+            miscellaneousExpensesAmountLabel.ForeColor = Color.FromArgb(236, 239, 244);
             miscellaneousExpensesAmountLabel.Location = new Point(25, 33);
             miscellaneousExpensesAmountLabel.Margin = new Padding(0);
             miscellaneousExpensesAmountLabel.Name = "miscellaneousExpensesAmountLabel";
@@ -65,7 +66,8 @@
             // 
             // miscellaneousCancelBtn
             // 
-            miscellaneousCancelBtn.BackColor = Color.IndianRed;
+            miscellaneousCancelBtn.BackColor = Color.FromArgb(191, 97, 106);
+            miscellaneousCancelBtn.FlatStyle = FlatStyle.Popup;
             miscellaneousCancelBtn.Location = new Point(79, 251);
             miscellaneousCancelBtn.Name = "miscellaneousCancelBtn";
             miscellaneousCancelBtn.Size = new Size(101, 38);
@@ -76,8 +78,9 @@
             // 
             // miscellaneousEnterBtn
             // 
-            miscellaneousEnterBtn.BackColor = Color.YellowGreen;
+            miscellaneousEnterBtn.BackColor = Color.FromArgb(145, 188, 143);
             miscellaneousEnterBtn.Cursor = Cursors.Hand;
+            miscellaneousEnterBtn.FlatStyle = FlatStyle.Popup;
             miscellaneousEnterBtn.Location = new Point(244, 251);
             miscellaneousEnterBtn.Name = "miscellaneousEnterBtn";
             miscellaneousEnterBtn.Size = new Size(101, 38);
@@ -90,6 +93,7 @@
             // 
             miscellaneousNoteLabel.AutoSize = true;
             miscellaneousNoteLabel.Font = new Font("Segoe UI", 10F);
+            miscellaneousNoteLabel.ForeColor = Color.FromArgb(236, 239, 244);
             miscellaneousNoteLabel.Location = new Point(25, 93);
             miscellaneousNoteLabel.Margin = new Padding(0);
             miscellaneousNoteLabel.Name = "miscellaneousNoteLabel";
@@ -112,6 +116,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(70, 79, 99);
             ClientSize = new Size(424, 321);
             Controls.Add(miscellaneousNoteLabel);
             Controls.Add(miscellaneousNoteInput);

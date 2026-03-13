@@ -35,7 +35,8 @@
             // 
             // appointmentsDeleteNoBtn
             // 
-            appointmentsDeleteNoBtn.BackColor = Color.IndianRed;
+            appointmentsDeleteNoBtn.BackColor = Color.FromArgb(191, 97, 106);
+            appointmentsDeleteNoBtn.FlatStyle = FlatStyle.Popup;
             appointmentsDeleteNoBtn.Location = new Point(36, 83);
             appointmentsDeleteNoBtn.Name = "appointmentsDeleteNoBtn";
             appointmentsDeleteNoBtn.Size = new Size(101, 38);
@@ -45,7 +46,8 @@
             // 
             // appointmentsDeleteYesBtn
             // 
-            appointmentsDeleteYesBtn.BackColor = Color.YellowGreen;
+            appointmentsDeleteYesBtn.BackColor = Color.FromArgb(145, 188, 143);
+            appointmentsDeleteYesBtn.FlatStyle = FlatStyle.Popup;
             appointmentsDeleteYesBtn.Location = new Point(178, 83);
             appointmentsDeleteYesBtn.Name = "appointmentsDeleteYesBtn";
             appointmentsDeleteYesBtn.Size = new Size(101, 38);
@@ -57,21 +59,23 @@
             // 
             appointmentsDeleteLabel.AutoSize = true;
             appointmentsDeleteLabel.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            appointmentsDeleteLabel.ForeColor = Color.FromArgb(236, 239, 244);
             appointmentsDeleteLabel.Location = new Point(84, 41);
             appointmentsDeleteLabel.Name = "appointmentsDeleteLabel";
             appointmentsDeleteLabel.Size = new Size(142, 21);
             appointmentsDeleteLabel.TabIndex = 2;
             appointmentsDeleteLabel.Text = "Confirm Deletion?";
             // 
-            // appointmentsDeletePopup
+            // AppointmentsDeletePopup
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(70, 79, 99);
             ClientSize = new Size(310, 182);
             Controls.Add(appointmentsDeleteLabel);
             Controls.Add(appointmentsDeleteYesBtn);
             Controls.Add(appointmentsDeleteNoBtn);
-            Name = "appointmentsDeletePopup";
+            Name = "AppointmentsDeletePopup";
             Text = "Delete Confirmation";
             ResumeLayout(false);
             PerformLayout();
