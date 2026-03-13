@@ -104,7 +104,6 @@ namespace TKS_Sitoy_Massage___Wellness_Spa
             // ignore header clicks
             if (e.RowIndex < 0)
                 return;
-
             // DELETE button
             if (appointmentsPanelGridView.Columns[e.ColumnIndex].Name == "appointmentsDeleteBtn")
             {
@@ -129,7 +128,6 @@ namespace TKS_Sitoy_Massage___Wellness_Spa
             // DELETE button
             if (inventoryPanelGridView.Columns[e.ColumnIndex].Name == "inventoryDeleteBtn")
             {
-                MessageBox.Show("Delete button clicked for row " + e.RowIndex);
                 // put your delete logic here
             }
 

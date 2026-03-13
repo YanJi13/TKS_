@@ -42,9 +42,8 @@ namespace TKS_Sitoy_Massage___Wellness_Spa
                 try
                 {
                     db.OpenConnection();
-                    int attendanceId = 0;
 
-                    // 1. CHECK: Does this therapist already have an ID for today?
+                    // 1. CHECK: Does this therapist have an attendance record for the selected date?
                     string checkQuery = "SELECT attendance_id FROM therapist_attendance WHERE therapist_name = @name AND date = @date LIMIT 1";
                     MySqlCommand checkCmd = new MySqlCommand(checkQuery, db.connection);
                     checkCmd.Parameters.AddWithValue("@name", therapistName);
